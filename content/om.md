@@ -16,13 +16,12 @@ views:
                 type: single
                 route: block/om-redovisa
 ---
-Om
+Om kursen design
 =========================
+På denna webbplats publicerar jag mina redovisningstexter för kursmomenten 
+i kursen design. 
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
-
-Skriv några kloka ord om kursen?
-
-Lägg till en representativ bild för kursen, enligt ditt egna val.
-
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
+<img src="img/image-from-rawpixel-id-593171-jpeg.jpg" 
+        id = "programming_code"
+        alt="Bild på programmeringskod">
+Bild från rawpixel.com / Markus Spiske
