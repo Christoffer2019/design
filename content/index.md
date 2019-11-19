@@ -1,25 +1,51 @@
 ---
-title: "Min fina titel"
+title: "Presentation"
+views:
+    byline:
+        region: main
+        template: anax/v2/block/default
+        sort: 3
+        data:
+            meta: 
+                type: single
+                route: block/byline
+    imageMe:
+        region: main
+        template: anax/v2/block/default
+        sort: 2
+        class: sidebar
+        data:
+            meta: 
+                type: single
+                route: block/imageMe
 ---
-Min me-sida i kursen design
-=========================
+<div class="article-index">
+<header>
+<h1>Min me-sida i kursen design</h1>
+<p class="author">Uppdaterad<time datetime="2019-11-15"> 15 november 2019
+</time> av Christoffer Lymalm</p>
+</header>
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+<p>Jag heter Christoffer, är 27 år och bor i Växjö. Jag studerar 
+Webbprogrammering 120hp på distans vid Blekinge Tekniska Högskola.</p>
 
-[FIGURE src="image/me.jpg?w=500" class="right" caption="Bild på mig"]
+<p>I gymnasiet studerade jag på Teknikprogrammet med inriktning bioteknik. 
+Programmet innefattade bland annat matematik, naturvetenskap, webbdesign och 
+programmering.</p>
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+<p>Efter gymnasiet studerade jag olika kurser inom bland annat matematik, 
+programmering och japanska. Jag studerade japanska i tre terminer vid Lunds 
+Universitet och via ett utbytesavtal studerade jag vid Gifu Universitet i 
+Japan under en sommar. Där fick jag en djupare inblick i den japanska 
+kulturen. Jag besökte bland annat olika slott och tempel, tittade på en 
+sumomatch och testade att spela på japanska trummor, wadaiko. Mina 
+favoriträtter inom japansk mat är ramen, curryris, okonomiyaki och gyouza.</p>
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+<p>Jag har bland annat jobbat som fastighetsarbetare och smartphone-reparatör.
+</p>
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
+<p>Sedan jag slutade gymnasiet har jag länge funderat på vad jag verkligen är 
+intresserad av att studera och vilket yrke jag vill ha i framtiden. Nu har jag insett att jag vill jobba som programmerare.</p>
 
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+<p>Mina intressen är att spela violin, gå på bio och konserter, resa, träna och träffa vänner.</p>
+</div>
