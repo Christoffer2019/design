@@ -11,13 +11,12 @@ namespace Anax\View;
 
 
 
-?><h1>Stylechooser</h1>
-<p>Here you can select among the available styles and activate them.</p>
+?><h1>Styleväljare</h1>
 <form class="stylechooser" method="post" action="<?= url("style/update") ?>">
     <fieldset>
-        <legend>Stylechooser</legend>
+        <legend>Styleväljare</legend>
         <p>
-            <label for="stylechooser">Select the style to activate it:<br>
+            <label for="stylechooser">Välj en style att aktivera:<br>
                 <select name="stylechooser" onchange="form.submit();">
                     <option value="none">No style is selected, using default.</option>
                     <?php foreach ($styles as $key => $value) :
