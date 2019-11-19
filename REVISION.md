@@ -4,8 +4,7 @@ Revision history
 v1.0.0 (2019-11-15)
 -------------------
 
-* Added revision history, licence and README.
-* Changed to my student acronym in htdocs/.htaccess.
+* No changes
 
 v1.0.1 (2019-11-19)
 -------------------
