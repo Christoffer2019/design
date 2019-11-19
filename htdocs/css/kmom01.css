@@ -14,3 +14,449 @@
 .rm-navbar-max {
     display: none;
 }
+
+html {
+    background-image: url("../img/image-from-rawpixel-id-463162-jpeg.jpg");
+    background-size: auto 100%;
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    font-size: 100%;
+    font-family: 'Ubuntu', Verdana, Tahoma, sans-serif;
+}
+
+.wrap-all {
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin: 0;
+}
+
+.outer-wrap-header,
+.outer-wrap-main,
+.footer-column,
+.site-footer {
+    box-sizing: border-box;
+    padding: 1.5em;
+}
+
+.outer-wrap-main {
+    padding-top: 1em;
+}
+
+
+/* header */
+
+.outer-wrap-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+}
+
+.region-header {
+    width: 100%;
+}
+
+/* logo image size */
+
+.region-header-col-1 {
+    width: 250px;
+    height: 61px;
+}
+
+/* flash image */
+
+.outer-wrap-flash {
+    margin-bottom: 1em;
+}
+
+.outer-wrap-flash img {
+    width: 100%;
+}
+
+/* images */
+
+.route-verktyg-markdown img {
+    width: 100%;
+}
+
+.route-verktyg-shortcode .figure,
+.route-verktyg-frontmatter .figure {
+    width: 100%;
+    margin: 0;
+}
+
+.figure {
+    overflow: auto;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* flashmessage */
+
+.outer-wrap-flash-message {
+    margin-left: 1.5em;
+}
+
+/* navbars and links */
+
+/* .my-navbar */
+
+.my-navbar {
+    list-style-type: none;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.my-navbar li {
+    width: 16.66%;
+}
+
+.my-navbar a {
+    display: block;
+    color: #47477A;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    text-align: center;
+}
+
+.my-navbar a:hover {
+    color:black;
+}
+
+/* .toc navbar */
+
+.toc {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.toc a {
+    display: block;
+    background-color: #47477A;
+    color: white;
+    text-decoration: none;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    transition-duration: 0.3s;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-radius: 7px;
+    margin-right: 2em;
+}
+
+/* .next-previous links */
+
+.next-previous {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    display: block;
+    width: 14em;
+    color: black;
+}
+
+.next-previous a {
+    text-decoration: none;
+    color: black;
+}
+
+.next-previous a:hover {
+    color: #264368;
+    text-decoration: underline;
+}
+
+/* breadcrumb navbar */
+
+.region-breadcrumb {
+    width: 30%;
+    margin-right: 2em;
+}
+
+.breadcrumb-list ul {
+    list-style-type: none;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    box-sizing: border-box;
+
+}
+
+.breadcrumb-list a {
+    display: block;
+    background-color: #47477A;
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 0.8em;
+    transition-duration: 0.3s;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-radius: 7px;
+}
+
+/* verktyg.md */
+
+.route-redovisning .region-main,
+.route-redovisning-kmom01 .region-main,
+.route-redovisning-kmom02 .region-main,
+.route-redovisning-kmom03 .region-main,
+.route-redovisning-kmom04 .region-main,
+.route-redovisning-kmom05 .region-main,
+.route-redovisning-kmom06 .region-main,
+.route-redovisning-kmom10 .region-main,
+.route-verktyg .region-main,
+.route-verktyg-markdown .region-main,
+.route-verktyg-shortcode .region-main, 
+.route-verktyg-frontmatter .region-main,
+.route-verktyg-stylevaljare .region-main,
+.route-verktyg-vyer-och-templatefiler .region-main,
+.route-verktyg-layout-och-regioner .region-main,
+.route-verktyg-font-awesome .region-main,
+.route-verktyg-viewport .region-main,
+.route-verktyg-vertikalt-grid .region-main,
+.route-verktyg-horisontellt-grid .region-main,
+.route-verktyg-bildhantering-med-cimage .region-main,
+.route-verktyg-shortcode-figure .region-main,
+.route-verktyg-less-modul-for-figure .region-main,
+.route-verktyg-bilder-i-text .region-main,
+.route-verktyg-ovrigt .region-main,
+.route-verktyg-styla-en-route .region-main {
+    width: 70%;
+}
+
+.region-sidebar-left {
+    padding-left: 0;
+    width: 30%;
+}
+
+ul,
+div .has-sidebar-left {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* a:hover */
+
+.toc a:hover,
+.breadcrumb-list a:hover {
+    background-color: #264368;
+}
+
+/* om.md */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.has-sidebar-right {
+    width: 63%;
+}
+
+.has-sidebar-right img {
+    width: 100%;
+}
+
+.wrap-sidebar {
+    width: 30%;
+    padding-left: 7%;
+}
+
+/* stylechooser */
+
+fieldset {
+    border: 1px solid #532480;
+    border-radius: 10px;
+}
+
+.stylechooser {
+    overflow-x: auto;
+}
+
+/* index.md */
+
+.article-index {
+    width: 63%;
+    float: left;
+    padding-bottom: 1em;
+}
+
+.block .sidebar {
+    width: 30%;
+    float: right;
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.block .sidebar img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* byline */
+
+.byline-image img {
+    display: block;
+    border-radius: 15px;
+    width: 20%;
+}
+
+.byline-image {
+    border-top: 2px solid #47477A;
+    width: 100%;
+    margin: 0;
+    padding-top: 1.5em;
+    display: block;
+    clear: both;
+}
+
+/* footer */
+
+.footer-column {
+    width: 33.33%;
+    float: left;
+    color: white;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+}
+
+.site-footer {
+    background-color: #47477A;
+    color: white;
+    border-radius: 15px;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+h1,
+h2,
+h3 {
+    color: #47477A;
+}
+
+.author {
+    font-style: italic;    
+}
+
+@media (min-width: 961px) {
+    body {
+        width: 50%;
+        min-width: 941px;
+        margin: auto;
+    }
+    
+}
+
+@media (max-width: 960px) {
+    body {
+        width: 100%;
+        margin: auto;
+    }
+
+    .wrap-all {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .site-footer {
+        background-color: rgba(71, 71, 122, 0.7);
+    }
+
+    .site-footer,
+    .footer-column {
+        padding: 1em 1.5em;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer-column,
+    .has-sidebar-right,
+    .wrap-sidebar,
+    .my-navbar li,
+    .article-index,
+    .region-breadcrumb,
+    .region-main,
+    .route-redovisning .region-main,
+    .route-redovisning-kmom01 .region-main,
+    .route-redovisning-kmom02 .region-main,
+    .route-redovisning-kmom03 .region-main,
+    .route-redovisning-kmom04 .region-main,
+    .route-redovisning-kmom05 .region-main,
+    .route-redovisning-kmom06 .region-main,
+    .route-redovisning-kmom10 .region-main,
+    .route-verktyg .region-main,
+    .route-verktyg-markdown .region-main,
+    .route-verktyg-shortcode .region-main, 
+    .route-verktyg-frontmatter .region-main,
+    .route-verktyg-stylevaljare .region-main,
+    .route-verktyg-vyer-och-templatefiler .region-main,
+    .route-verktyg-layout-och-regioner .region-main,
+    .route-verktyg-font-awesome .region-main,
+    .route-verktyg-viewport .region-main,
+    .route-verktyg-vertikalt-grid .region-main,
+    .route-verktyg-horisontellt-grid .region-main,
+    .route-verktyg-bildhantering-med-cimage .region-main,
+    .route-verktyg-shortcode-figure .region-main,
+    .route-verktyg-less-modul-for-figure .region-main,
+    .route-verktyg-bilder-i-text .region-main,
+    .route-verktyg-ovrigt .region-main,
+    .route-verktyg-styla-en-route .region-main {
+        width: 100%;
+    }
+
+    /* navbars */
+
+    .my-navbar,
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-navbar a {
+        text-align: left;
+        font-size: 1.3em;
+    }
+
+    .toc a {
+        margin-right: 0;
+    }
+
+    .wrap-sidebar {
+        padding-left: 0;
+    }
+
+    .byline-image img {
+        width: 40%;
+    }
+
+    .article,
+    .block .sidebar {
+        width: auto;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
+
+    .footer-column {
+        border-bottom: 1px solid white;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
