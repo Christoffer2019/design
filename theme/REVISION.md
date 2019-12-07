@@ -41,3 +41,4 @@ v2.0.0 (2019-12-07)
     * Updated information in footer
 * Added a new stylesheet: css/kmom01_v2.min.css, which is a copy of css/kmom01.css, but coded in less.
 * Added content in redovisning/kmom02
+* Small changes in css/kmom01.css
