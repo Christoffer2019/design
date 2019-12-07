@@ -4,7 +4,7 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "img/image-from-rawpixel-id-430166-jpeg.jpg"
+            src: "img/kmom02/image-from-rawpixel-id-560226-jpeg.jpg"
 ---
 Bildhantering med Cimage
 =========================

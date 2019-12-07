@@ -14,13 +14,12 @@ return [
         "data" => [
             "baseTitle" => " | design",
             "bodyClass" => null,
-            "favicon" => "favicon-32x32.png",
+            "favicon" => "img/kmom02/favicon-32x32.png",
             "htmlClass" => null,
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/kmom01.css",
-                "https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&display=swap",
+                "css/kmom02.min.css",
             ],
             "javascripts" => [
                 "js/responsive-menu.js",
@@ -35,7 +34,7 @@ return [
             "template" => "anax/v2/header/site_logo",
             "data" => [
                 "class" => "large",
-                "siteLogo"      => "img/logo_text250x61.jpg",
+                "siteLogo"      => "img/kmom02/logo250x64.png",
                 "siteLogoAlt"   => "logo",
             ],
         ],
