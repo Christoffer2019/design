@@ -1,0 +1,250 @@
+/**
+ * Layout for responsive style through media queries.
+ */
+
+/**
+ * Variables
+ */ 
+
+ @color-1: white;
+ @color-2: #47477A;
+ @color-3: black;
+ @color-4: #264368;
+ @color-5: #532480;
+
+ @max-width-text: 37em;
+
+ @font-size-1: 1.3em;
+
+ @width-1: 100%;
+ @width-2: 70%;
+ @width-3: 63%;
+ @width-4: 50%;
+ @width-5: 33.33%;
+ @width-6: 30%;
+ @width-7: 20%;
+ @width-8: 16.66%;
+ @width-9: 40%;
+
+ @min-width-1: 700px;
+ @min-width-2: 1100px;
+ 
+ @trans-dur-short: 0.3s;
+ @trans-dur-long: 0.4s;
+ 
+ @border-width-1: 1px;
+ @border-width-2: 2px;
+
+ @border-radius-1: 7px;
+ @border-radius-2: 15px;
+ @border-radius-3: 10px;
+
+ @padding-1: 0.6em;
+ @padding-2: 0.8em;
+ @padding-3: 1.5em;
+ @padding-4: 1em;
+ 
+ @margin-1: 0.8em;
+ @margin-2: 1em;
+ @margin-3: 1.5em;
+ @margin-4: 2em;
+ @margin-5: 0.5em;
+
+/**
+ * General layout
+ */
+
+@media (min-width: @min-width-2) {
+    body {
+        width: @width-4;
+        min-width: @min-width-2 - 20px;
+    }
+
+    .region-footer {
+        background-color: @color-2;
+        color: @color-1;
+    }   
+}
+
+@media (max-width: @min-width-2 - 1px) {
+    body {
+        width: @width-1;
+    }
+
+    .wrap-all {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .region-footer {
+        background-color: rgba(71, 71, 122, 0.7);
+    }
+
+    .site-footer,
+    .footer-column {
+        padding: @padding-4 @padding-3;
+    }
+}
+
+@media (min-width: @min-width-1) {
+    .my-navbar li {
+        width: @width-8;
+    }
+
+    .outer-wrap-breadcrumb {
+        width: @width-6;
+    }
+
+    .route-redovisning .region-main,
+    .route-redovisning-kmom01 .region-main,
+    .route-redovisning-kmom02 .region-main,
+    .route-redovisning-kmom03 .region-main,
+    .route-redovisning-kmom04 .region-main,
+    .route-redovisning-kmom05 .region-main,
+    .route-redovisning-kmom06 .region-main,
+    .route-redovisning-kmom10 .region-main,
+    .route-verktyg .region-main,
+    .route-verktyg-kmom01 .region-main,
+    .route-verktyg-markdown .region-main,
+    .route-verktyg-shortcode .region-main, 
+    .route-verktyg-frontmatter .region-main,
+    .route-verktyg-stylevaljare .region-main,
+    .route-verktyg-vyer-och-templatefiler .region-main,
+    .route-verktyg-layout-och-regioner .region-main,
+    .route-verktyg-kmom02 .region-main,
+    .route-verktyg-font-awesome .region-main,
+    .route-verktyg-kmom03 .region-main,
+    .route-verktyg-viewport .region-main,
+    .route-verktyg-vertikalt-grid .region-main,
+    .route-verktyg-horisontellt-grid .region-main,
+    .route-verktyg-kmom05 .region-main,
+    .route-verktyg-bildhantering-med-cimage .region-main,
+    .route-verktyg-shortcode-figure .region-main,
+    .route-verktyg-less-modul-for-figure .region-main,
+    .route-verktyg-bilder-i-text .region-main,
+    .route-verktyg-ovrigt .region-main,
+    .route-verktyg-styla-en-route .region-main {
+        width: @width-2;
+    }
+
+    .region-sidebar-left,
+    .wrap-sidebar {
+        width: @width-6;
+    }
+
+    .has-sidebar-right {
+        width: @width-3;
+    }
+
+    /* index.md */
+
+    .article-index {
+        width: @width-3;
+        float: left;
+        padding-bottom: @padding-4;
+    }
+
+    .block .sidebar {
+        width: @width-6;
+        float: right;
+        margin: 0;
+        padding-bottom: @padding-4;
+    }
+
+    .route-om .region-sidebar-right {
+        width: @width-6;
+        float: right;
+        margin-left: 2em;
+        padding-bottom: @padding-4;
+    }
+
+    .byline-image img {
+        width: @width-7;
+        margin-bottom: @margin-2;
+    }
+
+    /* footer */
+
+    .footer-column {
+        width: @width-5;
+        float: left;
+    }
+}
+
+@media (max-width: @min-width-1 - 1px) {
+    .footer-column,
+    .has-sidebar-right,
+    .wrap-sidebar,
+    .my-navbar li,
+    .article-index,
+    .region-main,
+    .route-redovisning .region-main,
+    .route-redovisning-kmom01 .region-main,
+    .route-redovisning-kmom02 .region-main,
+    .route-redovisning-kmom03 .region-main,
+    .route-redovisning-kmom04 .region-main,
+    .route-redovisning-kmom05 .region-main,
+    .route-redovisning-kmom06 .region-main,
+    .route-redovisning-kmom10 .region-main,
+    .route-verktyg .region-main,
+    .route-verktyg-kmom01 .region-main,
+    .route-verktyg-markdown .region-main,
+    .route-verktyg-shortcode .region-main, 
+    .route-verktyg-frontmatter .region-main,
+    .route-verktyg-stylevaljare .region-main,
+    .route-verktyg-vyer-och-templatefiler .region-main,
+    .route-verktyg-layout-och-regioner .region-main,
+    .route-verktyg-kmom02 .region-main,
+    .route-verktyg-font-awesome .region-main,
+    .route-verktyg-kmom03 .region-main,
+    .route-verktyg-viewport .region-main,
+    .route-verktyg-vertikalt-grid .region-main,
+    .route-verktyg-horisontellt-grid .region-main,
+    .route-verktyg-kmom05 .region-main,
+    .route-verktyg-bildhantering-med-cimage .region-main,
+    .route-verktyg-shortcode-figure .region-main,
+    .route-verktyg-less-modul-for-figure .region-main,
+    .route-verktyg-bilder-i-text .region-main,
+    .route-verktyg-ovrigt .region-main,
+    .route-verktyg-styla-en-route .region-main {
+        width: @width-1;
+    }
+
+    /* navbars */
+
+    .my-navbar,
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-navbar a {
+        text-align: left;
+        font-size: @font-size-1;
+    }
+
+    .toc a {
+        margin-right: 0;
+    }
+
+    .wrap-sidebar {
+        padding-left: 0;
+    }
+
+    .byline-image img {
+        width: @width-9;
+    }
+
+    .article,
+    .block .sidebar {
+        width: auto;
+        margin-top: @margin-1;
+        margin-bottom: @margin-1;
+    }
+
+    .footer-column {
+        padding-top: @padding-4;
+        padding-bottom: @padding-4;
+        margin-bottom: @margin-2;
+        border-bottom: @border-width-1 solid @color-1;
+    }
+}

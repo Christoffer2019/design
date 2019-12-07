@@ -1,0 +1,35 @@
+/**
+ * Style for responsive menu
+ */
+
+
+ /**
+  * Example on media queries
+  */
+ @media screen and (max-width: 699px) {
+     .rm-small {
+         display: block;
+     }
+     
+     .rm-desktop {
+         display: none;
+     }
+ }
+
+ @media screen and (min-width: 700px) {
+     .rm-small {
+         display: none;
+     }
+ }
+
+ @media screen and (min-width: 700px) and (max-width: 899px) {
+    /**
+    * Menu layout for the desktop variant, usually full width of browser.
+    */
+
+    .rm-desktop li a {
+        // The link of the menu item
+        padding: 1em 0.8em; //testar
+        font-size: 0.8em;
+    }
+}

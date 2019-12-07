@@ -1,0 +1,304 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+@color-1: white;
+@color-2: #044704;
+@color-3: black;
+@color-5: rgba(4, 71, 4, 0.65);
+@color-6: rgba(255, 255, 255, 0.75);
+
+@fontFamilyHTML: 'Ubuntu', Verdana, Tahoma, sans-serif;
+@max-width-text: 37em;
+@font-size-1: 1.3em;
+
+@width-1: 100%;
+@width-2: 70%;
+@width-3: 63%;
+@width-4: 50%;
+@width-5: 33.33%;
+@width-6: 30%;
+@width-7: 20%;
+@width-8: 16.66%;
+@width-9: 40%;
+
+@min-width-1: 700px;
+@min-width-2: 1100px;
+
+@trans-dur-short: 0.3s;
+@trans-dur-long: 0.4s;
+
+@border-width-1: 1px;
+@border-width-2: 2px;
+
+@padding-1: 2.5em;
+@padding-2: 0.7em;
+@padding-3: 1.5em;
+@padding-4: 1em;
+@padding-5: 2em;
+
+@margin-1: 0.7em;
+@margin-2: 1em;
+@margin-3: 1.5em;
+@margin-4: 2em;
+
+ /**
+  * General layout
+  */
+
+img,
+fieldset {
+    max-width: 100%;
+}
+
+.hljs {
+    overflow-x: auto;
+}
+
+span {
+    font-size: 80%;
+    font-family: @fontFamilyHTML;
+    line-height: 1.5em;
+}
+ 
+  .region-header-col-2,
+ .region-header,
+ .outer-wrap-flash img,
+ .route-verktyg-markdown img,
+ .route-verktyg-shortcode .figure,
+ .route-verktyg-frontmatter .figure,
+ iframe {
+     width: @width-1;
+ }
+ 
+ .route-verktyg-shortcode .figure,
+ .route-verktyg-frontmatter .figure {
+     margin: 0;
+ }
+ 
+.region-header-col-1 {
+    margin-bottom: @margin-3;
+}
+
+ .figure {
+     overflow: auto;
+ }
+
+ .footer-column,
+ .site-footer,
+ .outer-wrap-header {
+     padding: @padding-3;
+ }
+ 
+ .outer-wrap-main {
+     padding: @padding-5 @padding-3 @padding-1;
+ }
+ 
+ .route-redovisning .region-main,
+ .route-redovisning-kmom01 .region-main,
+ .route-redovisning-kmom02 .region-main,
+ .route-redovisning-kmom03 .region-main,
+ .route-redovisning-kmom04 .region-main,
+ .route-redovisning-kmom05 .region-main,
+ .route-redovisning-kmom06 .region-main,
+ .route-redovisning-kmom10 .region-main,
+ .route-om .region-main,
+ .route-verktyg .region-main,
+ .route-verktyg-kmom01 .region-main,
+ .route-verktyg-markdown .region-main,
+ .route-verktyg-shortcode .region-main, 
+ .route-verktyg-frontmatter .region-main,
+ .route-verktyg-stylevaljare .region-main,
+ .route-verktyg-vyer-och-templatefiler .region-main,
+ .route-verktyg-layout-och-regioner .region-main,
+ .route-verktyg-kmom02 .region-main,
+ .route-verktyg-font-awesome .region-main,
+ .route-verktyg-kmom03 .region-main,
+ .route-verktyg-viewport .region-main,
+ .route-verktyg-vertikalt-grid .region-main,
+ .route-verktyg-horisontellt-grid .region-main,
+ .route-verktyg-kmom05 .region-main,
+ .route-verktyg-bildhantering-med-cimage .region-main,
+ .route-verktyg-shortcode-figure .region-main,
+ .route-verktyg-less-modul-for-figure .region-main,
+ .route-verktyg-bilder-i-text .region-main,
+ .route-verktyg-ovrigt .region-main,
+ .route-verktyg-styla-en-route .region-main,
+ .route-test .region-main {
+     max-width: @max-width-text;
+     margin: 0 auto;
+     line-height: 1.5em;
+ }
+
+ .route-style .region-main {
+    margin: 0 auto;
+    max-width: @max-width-text + 10em;
+ }
+ 
+ /* header */
+ 
+ .outer-wrap-header {
+     background-color: @color-1;
+ }
+ 
+ /* logo image size */
+ 
+ .region-header-col-1 {
+     width: 250px;
+     height: 64px;
+ }
+ 
+ /* flashmessage */
+ 
+ .outer-wrap-flash-message {
+     padding-left: @padding-3;
+ }
+ 
+ .article-index {
+     max-width: @max-width-text + 30%;
+ }
+ 
+ .byline-text {
+     max-width: @max-width-text;
+ }
+ 
+ .row {
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ /* navbars and links */
+
+ .outer-wrap-main a {
+     text-decoration: none;
+     color: @color-3;
+ }
+
+ .next-previous,
+ .breadcrumb-list a,
+ .has-sidebar-right img,
+ .block .sidebar img,
+ .byline-image img,
+ .byline-image {
+     display: block;
+ }
+ 
+ .next-previous a,
+ .breadcrumb-list a,
+ .footer-column a {
+     text-decoration: none;
+ }
+ 
+ /* .next-previous links */
+ 
+ .next-previous {
+     margin-top: @margin-2;
+     margin-bottom: @margin-2;
+     width: 14em;
+     color: @color-2;
+     & a {
+         color: @color-2;
+         &:hover {
+             color: @color-5;
+             text-decoration: underline;
+         }
+     }
+ }
+ 
+ /* breadcrumb navbar */
+ 
+ .outer-wrap-breadcrumb {
+     padding: @padding-2;
+ }
+ 
+ .region-breadcrumb {
+     width: @width-1;
+ }
+
+ .breadcrumb-list ul {
+    list-style-type: none;
+}
+ 
+ .breadcrumb-list a {
+     padding: @padding-2;
+     transition-duration: @trans-dur-short;
+     color: @color-2;
+        &:hover {
+            color: @color-5;
+            text-decoration: underline;
+        }
+ }
+ 
+ fieldset {
+     border: @border-width-1 solid @color-5;
+ }
+ 
+ /* sidebar */
+ 
+ .region-sidebar-left {
+     padding-left: 0;
+ }
+ 
+ ul,
+ div .has-sidebar-left {
+     padding: 0;
+     margin: 0;
+     border: 0;
+ }
+ 
+ /* om.md */
+ 
+ .has-sidebar-right img,
+ .block .sidebar img {
+     width: @width-1;
+ }
+ 
+ .stylechooser {
+     overflow-x: auto;
+ }
+ 
+ /* byline */
+ 
+ .byline-image {
+     width: @width-1;
+     margin: 0;
+     padding-top: @padding-3;
+     clear: both;
+     border-top: @border-width-2 solid @color-2;
+ }
+ 
+ /* footer */
+ 
+ .site-footer {
+     margin-top: @margin-3;
+     text-align: center;
+ }
+
+ .footer-column a,
+ .outer-wrap-footer {
+    color: @color-1;
+}
+ 
+ .author {
+     font-style: italic;    
+ }
+ 
+ p {
+     line-height: 1.5em;
+ }
+ 
+ h1,
+ h2,
+ h3 {
+     color: @color-2;
+ }
+
+.outer-wrap-breadcrumb {
+    width: @width-1;
+}
+

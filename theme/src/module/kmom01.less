@@ -1,0 +1,234 @@
+/*!
+ * Stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+/**
+ * Variables
+ */ 
+
+@min-width-1: 700px;
+@min-width-2: 1100px;
+
+@border-radius-1: 7px;
+@border-radius-2: 15px;
+@border-radius-3: 10px;
+
+@border-width-1: 1px;
+@border-width-2: 2px;
+
+@color-1: white;
+@color-2: #47477A;
+@color-3: black;
+@color-4: #264368;
+@color-5: #532480;
+
+@padding-3: 1.5em;
+@padding-4: 1em;
+
+@margin-2: 1em;
+@margin-3: 1.5em;
+@margin-4: 2em;
+@margin-5: 0.5em;
+
+/**
+ * Detailed layout
+ */
+
+/* Hide submenu, leave this to kmom02 */
+//.rm-desktop ul {
+//    display: none;
+//}
+
+/* Hide responsive/mobile menu, leave this to kmom02 */
+//.rm-navbar-max {
+//    display: none;
+//}
+
+html {
+    background-image: url("../img/image-from-rawpixel-id-463162-jpeg.jpg");
+    background-size: auto 100%;
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.wrap-all {
+    background-color: @color-1;
+    border-radius: @border-radius-2;
+}
+
+.outer-wrap-header,
+.outer-wrap-main,
+.footer-column,
+.site-footer {
+    padding: @padding-3;
+}
+
+.outer-wrap-main {
+    padding-top: @padding-4;
+}
+
+
+/* header */
+
+.outer-wrap-header {
+    border-top-left-radius: @border-radius-2;
+    border-top-right-radius: @border-radius-2;
+    background-color: @color-1;
+}
+
+/* logo image size */
+
+.region-header-col-1 {
+    width: 250px;
+    height: 61px;
+}
+
+/* flash image */
+
+.outer-wrap-flash {
+    margin-bottom: @margin-2;
+}
+
+/* flashmessage */
+
+.outer-wrap-flash-message {
+    margin-left: @margin-3;
+}
+
+/* navbars and links */
+
+/* .my-navbar */
+
+.my-navbar {
+    margin-bottom: @margin-5;
+}
+
+.my-navbar a {
+    color: @color-2;
+    font-weight: bold;
+}
+
+.my-navbar a:hover {
+    color: @color-3;
+}
+
+/* .toc navbar */
+
+.toc a {
+    background-color: @color-2;
+    color: @color-1;
+    border-bottom: @border-width-1 solid @color-1;
+    border-radius: @border-radius-1;
+    margin-right: @margin-4;
+}
+
+/* .next-previous links */
+
+.next-previous {
+    width: 14em;
+    color: @color-3;
+}
+
+.next-previous a {
+    color: @color-3;
+}
+
+.next-previous a:hover {
+    color: @color-4;
+    text-decoration: underline;
+}
+
+/* breadcrumb navbar */
+
+.breadcrumb-list a {
+    background-color: @color-2;
+    color: @color-1;
+    border-bottom: @border-width-1 solid @color-1;
+    border-radius: @border-radius-1;
+}
+
+.toc a:hover,
+.breadcrumb-list a:hover {
+    background-color: @color-4;
+}
+
+fieldset {
+    border: @border-width-1 solid @color-5;
+    border-radius: @border-radius-3;
+}
+
+.block .sidebar img {
+    border-radius: @border-radius-2;
+}
+
+/* byline */
+
+.byline-image img {
+    border-radius: @border-radius-2;
+}
+
+.byline-image {
+    border-top: @border-width-2 solid @color-2;
+}
+
+/* footer */
+
+.footer-column,
+.footer-column a {
+    color: @color-1;
+}
+
+.site-footer {
+    color: @color-1;
+    text-align: center;
+}
+
+.region-footer {
+    border-radius: @border-radius-2;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+h1,
+h2,
+h3 {
+    color: @color-2;
+}
+
+@media (min-width: @min-width-2) {
+    .region-footer {
+    background-color: @color-2;
+    color: @color-1;
+    }
+}
+
+@media (max-width: @min-width-2 - 1px) {
+    .wrap-all {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .region-footer {
+        background-color: rgba(71, 71, 122, 0.7);
+    }
+
+    .site-footer,
+    .footer-column {
+        padding: @padding-4 @padding-3;
+    }
+}
+
+@media (max-width: @min-width-1 - 1px) {
+    .footer-column {
+        border-bottom: @border-width-1 solid @color-1;
+    }
+
+    .footer-column {
+        margin-bottom: @margin-2;
+    }
+}
