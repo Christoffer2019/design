@@ -5,6 +5,14 @@
  * to style up the website so it is useable.
  */
 
+
+/*
+ * Import Google font
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&display=swap');
+
+
 /* Hide submenu, leave this to kmom02 */
 .rm-desktop ul {
     display: none;
