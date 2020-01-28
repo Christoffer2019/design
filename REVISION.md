@@ -10,7 +10,8 @@ v1.0.2 (2019-11-19)
 -------------------
 
 * Added a link 'test' in the menu and the responsive menu.
-* Changed link for favicon image and logo image. Removed array for logo text. Changed default stylesheet to css/kmom01.css. Added a link to Google font 'Ubuntu'.
+* Changed link for favicon image and logo image. Removed array for logo text.   
+* Changed default stylesheet to css/kmom01.css. Added a link to Google font 'Ubuntu'.
 * Changed link for flash image.
 * Changed content in footer column 1-3 and footer.
 * Changed text in 'om-kursrepo.md' and 'om-redovisa.md'.
@@ -26,3 +27,31 @@ v1.0.2 (2019-11-19)
 * Deleted some files and images
 * Updated revision history and CSS
 * Updated 01_kmom01.md
+
+v2.0.0 (2019-12-07)
+-------------------
+
+* Updated revision history
+* Added theme including responsive menu, Font Awesome, and more
+* Added a new default stylesheet: css/kmom02.min.css
+* ### css/kmom02.min.css
+    * Added responsive menu
+    * Changed images, logo and favicon
+    * Added 'to top page'-button
+    * Updated information in footer
+* Added a new stylesheet: css/kmom01_v2.min.css, which is a copy of css/kmom01.css, but coded in less.
+* Added content in redovisning/kmom02
+* Small changes in css/kmom01.css
+
+v3.0.0 (2020-01-28)
+-------------------
+
+* Updated revision history
+* Changed Makefile so that you can choose to compile specific (please write: 'make build LESS_SOURCES=src/lessFileName.less' where lessFileName is a less file) or all (please write: 'make build') less files in your terminal.
+* Added a function in htdocs/js/main.js for changing image path based on the current width of the browser window.
+* Added some images
+* Changed default stylesheet to htdocs/css/kmom03.min.css
+* Added new stylesheets: htdocs/css/kmom03.min.css and htdocs/css/kmom03.css, which are compilated from theme/src/kmom03.less.
+* Changed style for menu and footer.
+* Added vertical and typographic grid
+* Wrote an article for course part 3 in content/redovisning/03_kmom03.md
