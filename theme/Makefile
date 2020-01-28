@@ -82,7 +82,7 @@ BUILD = build
 HTDOCS = htdocs
 SOURCE = src
 
-LESS_SOURCES = $(shell find $(SOURCE) -maxdepth 1 -name '*.less')
+LESS_SOURCES ?= $(shell find $(SOURCE) -maxdepth 1 -name '*.less')
 LESS_CSS 	 = $(LESS_SOURCES:$(SOURCE)/%.less=$(BUILD)/less/css/%.css)
 LESS_MIN_CSS = $(LESS_SOURCES:$(SOURCE)/%.less=$(BUILD)/less/css/%.min.css)
 LESS_LINT 	 = $(LESS_SOURCES:$(SOURCE)/%.less=$(BUILD)/less/lint/%.less)
