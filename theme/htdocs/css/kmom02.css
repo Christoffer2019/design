@@ -1,5 +1,5 @@
 /*!
- * LESS version of the stylesheet for design kmom01.
+ * LESS version of the stylesheet for design kmom02.
  *
  * This stylesheet is for the design course and kmom01. Its intention is to
  * use kmom01.css and lessify the style and use this as a wrapper for the new
@@ -5290,19 +5290,19 @@ h3 {
 }
 a.rm-button {
   display: inline-block;
-  color: #044704;
+  color: #646464;
   background-color: transparent;
   outline: none;
   position: fixed;
 }
 a.rm-button:active {
-  color: #044704;
+  color: #646464;
   background-color: transparent;
 }
 a.rm-button .rm-button-face-1 {
   position: absolute;
   transition: color 0.1s ease;
-  color: #044704;
+  color: #646464;
 }
 a.rm-button .rm-button-face-2 {
   position: relative;
@@ -5318,17 +5318,14 @@ a.rm-button.rm-clicked .rm-button-face-1 {
 }
 a.rm-button.rm-clicked .rm-button-face-2 {
   z-index: 2;
-  color: #044704;
+  color: #646464;
 }
 /**
  * Standard menu layout, valid for any subtype.
  */
-.rm-default li {
-  display: inline-block;
-}
 .rm-default li:hover {
-  color: #044704;
-  background-color: white;
+  color: #2b2b2b;
+  background-color: #c3c3c3;
 }
 .rm-default li li {
   display: block;
@@ -5337,13 +5334,15 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-default a {
   display: block;
   text-decoration: none;
-  white-space: nowrap;
+  background-color: #2b2b2b;
+  /*space: nowrap;*/
   padding: 1em;
   outline: none;
 }
 .rm-default a:hover {
   text-decoration: none;
-  background-color: #131313;
+  background-color: #c3c3c3;
+  color: #2b2b2b;
 }
 .rm-default ul {
   position: absolute;
@@ -5365,11 +5364,13 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #131313;
+  background-color: #2b2b2b;
 }
 .rm-desktop li {
   position: relative;
-  width: 16%;
+  width: 16.66%;
+  float: left;
+  border-right: 1px solid #ddd;
 }
 .rm-desktop li ul li {
   width: 100%;
@@ -5387,18 +5388,18 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   background-color: inherit;
 }
 .rm-desktop li a {
-  color: white;
-  background-color: #131313;
+  color: #c3c3c3;
+  background-color: #2b2b2b;
   padding: 1em;
   text-align: center;
 }
 .rm-desktop li a:hover {
-  color: #044704;
-  background-color: white;
+  color: #2b2b2b;
+  background-color: #c3c3c3;
 }
 .rm-desktop li:hover {
-  color: #044704;
-  background-color: white;
+  color: #2b2b2b;
+  background-color: #c3c3c3;
 }
 .rm-desktop li:hover > ul {
   left: auto;
@@ -5417,7 +5418,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-mobile {
   width: 100%;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #131313;
+  background-color: #2b2b2b;
   color: #fff;
 }
 .rm-mobile a {
@@ -5468,13 +5469,19 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   height: 500px;
   overflow-y: auto;
   padding-top: 72px;
-  background-color: #131313;
+  background-color: #2b2b2b;
   /* Color when menu item is clicked */
   /* Button for submenu */
-  /* Style for submenu */
+}
+.rm-max .rm-mobile a {
+  border-bottom: 1px solid white;
+  color: #c3c3c3 !important;
+}
+.rm-max .rm-mobile a:hover {
+  color: #2b2b2b !important;
 }
 .rm-max .rm-mobile li a:active {
-  background-color: white;
+  background-color: #c3c3c3;
 }
 .rm-max .rm-mobile.rm-clicked {
   transform: translateX(0);
@@ -5482,10 +5489,13 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-max .rm-mobile .rm-show-submenu li {
   width: 100%;
 }
+.rm-max .rm-mobile .rm-show-submenu a {
+  padding-left: 3em;
+}
 .rm-max .rm-mobile .rm-submenu-button {
   float: right;
   box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  background-color: #c8c8c8;
+  background-color: #6e6e6e;
   padding: 8px 24px;
   margin-right: 8px;
   margin-top: 10px;
@@ -5498,10 +5508,13 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-max .rm-mobile .rm-submenu-button:hover {
   text-decoration: none;
-  background-color: #044704;
+  background-color: #8c8c8c;
 }
-.rm-max .rm-mobile li ul {
-  padding-left: 8px;
+.rm-max .rm-mobile .rm-submenu-open a {
+  color: #c3c3c3 !important;
+}
+.rm-max .rm-mobile .rm-submenu-open a:hover {
+  color: #2b2b2b !important;
 }
 .rm-max .rm-mobile .rm-submenu-open > .rm-submenu-button:after {
   content: "\25B2";
@@ -5531,12 +5544,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 899px) {
+@media screen and (min-width: 700px) and (max-width: 1219px) {
   /**
     * Menu layout for the desktop variant, usually full width of browser.
     */
   .rm-desktop li a {
-    padding: 1em 0.8em;
+    padding: 0.8em 0.7em;
     font-size: 0.8em;
   }
 }
