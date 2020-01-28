@@ -21,7 +21,8 @@ Om kursen design
 På denna webbplats publicerar jag mina redovisningstexter för kursmomenten 
 i kursen design. 
 
-<img src="img/image-from-rawpixel-id-593171-jpeg.jpg" 
-        id = "programming_code"
+<img src="" 
+        id = "about_img"
         alt="Bild på programmeringskod">
+
 Bild från rawpixel.com / Markus Spiske

@@ -1,3 +1,1 @@
-<figure class = "sidebar">
-    <img src="img/me.jpg" class="me" alt="Image of Christoffer">  
-</figure>
+<img src="" id="me_presentation" class="me_presentation" alt="Image of Christoffer">  

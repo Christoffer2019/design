@@ -10,7 +10,7 @@ views:
                 type: single
                 route: block/byline
     imageMe:
-        region: main
+        region: sidebar-right
         template: anax/v2/block/default
         sort: 2
         class: sidebar
