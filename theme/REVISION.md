@@ -56,4 +56,4 @@ v3.0.0 (2020-01-28)
 * Added vertical and typographic grid
 * Wrote an article for course part 3 in content/redovisning/03_kmom03.md
 * Minor changes in content map.
-* Included htdocs/js/main.js, changed favicon image and added site logo text in config/page.php.
+* Included htdocs/js/main.js, changed favicon image and added site logo text in config/page.php. 

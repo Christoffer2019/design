@@ -51,7 +51,9 @@ v3.0.0 (2020-01-28)
 * Added a function in htdocs/js/main.js for changing image path based on the current width of the browser window.
 * Added some images
 * Changed default stylesheet to htdocs/css/kmom03.min.css
-* Added new stylesheets: htdocs/css/kmom03.min.css and htdocs/css/kmom03.css, which are compilated from theme/src/kmom03.less.
+* Updated and added new stylesheets
 * Changed style for menu and footer.
 * Added vertical and typographic grid
 * Wrote an article for course part 3 in content/redovisning/03_kmom03.md
+* Minor changes in content map.
+* Included htdocs/js/main.js, changed favicon image and added site logo text in config/page.php. 
