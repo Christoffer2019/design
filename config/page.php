@@ -14,15 +14,16 @@ return [
         "data" => [
             "baseTitle" => " | design",
             "bodyClass" => null,
-            "favicon" => "img/kmom02/favicon-32x32.png",
+            "favicon" => "img/kmom03/favicon.ico",
             "htmlClass" => null,
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/kmom02.min.css",
+                "css/kmom03.min.css",
             ],
             "javascripts" => [
                 "js/responsive-menu.js",
+                "js/main.js",
             ],
         ],
     ],
@@ -34,8 +35,16 @@ return [
             "template" => "anax/v2/header/site_logo",
             "data" => [
                 "class" => "large",
-                "siteLogo"      => "img/kmom02/logo250x64.png",
+                "siteLogo"      => "img/kmom03/logo.png",
                 "siteLogoAlt"   => "logo",
+            ],
+        ],
+        [
+            "region" => "header-col-1",
+            "template" => "anax/v2/header/site_logo_text",
+            "data" => [
+                "homeLink"      => "",
+                "siteLogoText"  => "Kursen Design",
             ],
         ],
         [
