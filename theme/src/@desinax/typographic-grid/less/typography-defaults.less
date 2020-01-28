@@ -19,7 +19,7 @@
 @fontSizeH6: 1.25em;
 
 // header h1-h6 borders
-@colorH1BorderBottom: #666;
+@colorH1BorderBottom: rgb(43, 43, 43); // #666;
 @colorH2BorderBottom: #CCC;
 @colorH3BorderBottom: #EEE;
 @colorH4BorderBottom: #EEE;
@@ -33,9 +33,9 @@
 @borderSizeH6: 1px;
 
 // fontsize code blocks
-//@fontSizeCodeInline:  1.25em;
-@fontSizeCodeBlock:   1.0em;
-@lineHeightCodeBlock: 1.5;
+@fontSizeCodeInline:  0.85em; //1.25em;
+@fontSizeCodeBlock:   0.85em; //1.0em;
+@lineHeightCodeBlock: 1.41; //1.5;
 
  // fontsize super and subscripts
  @fontSizeSupSub: 0.75em;
@@ -263,7 +263,7 @@
         kbd,
         samp,
         .code {
-            //font-size: @fontSizeCodeInline;
+            font-size: @fontSizeCodeInline;
             font-family: @fontFamilyCode;
         }
 
@@ -363,9 +363,9 @@
             }
         }
 
-        dt {
-            //font-weight: bold;
-        }
+        //dt {
+        //    //font-weight: bold;
+        //}
 
         dd {
             margin-left: 1.5em;
@@ -419,7 +419,7 @@
 
             th,
             td {
-                padding: @magicNumber / 4;
+                padding: @magicNumber / 2; //@magicNumber / 4;
             }
 
             tr {

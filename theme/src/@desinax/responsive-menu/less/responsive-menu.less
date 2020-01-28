@@ -4,10 +4,10 @@
 
 // General
 @navbarAccentColor:         #023363;
-@navbarItemBgColor:         #131313; //#444;
-@navbarItemColor:           white;
-@navbarItemHoverColor:      #044704;; //lighten(@navbarItemColor, 20%);
-@navbarItemHoverBgColor:    white; //#666;
+@navbarItemBgColor:         rgb(43, 43, 43); //#444;
+@navbarItemColor:           rgb(195, 195, 195);
+@navbarItemHoverColor:      rgb(43, 43, 43); //lighten(@navbarItemColor, 20%);
+@navbarItemHoverBgColor:    rgb(195, 195, 195); //#666;
 
 // Menu item current/selected
 @navbarItemSelectedColor:       inherit;
@@ -20,7 +20,7 @@
 @navbarMobileBorderColor:               #ddd;
 
 // The menu button
-@navbarMenuButtonColor:         #044704;;
+@navbarMenuButtonColor:         rgb(100, 100, 100);
 @navbarMenuButtonBgColor:       transparent;
 //@navbarMenuButtonBorderColor:   #999;
 
@@ -41,16 +41,16 @@
 @submenuItemBorderColor:    #eee;
 
 // Mobile menu
-@mobileBgColor:     #131313;
+@mobileBgColor:     rgb(43, 43, 43);
 @mobileColor:       #fff;
 
 // Max menu
-@maxBgColor:                #131313;
-@maxMenuItemClickedBgColor: white; //@navbarMenuButtonClickedColor;
+@maxBgColor:                rgb(43, 43, 43);
+@maxMenuItemClickedBgColor: rgb(195, 195, 195); //@navbarMenuButtonClickedColor;
 @maxButtonColor:            #044704; //inherit
 @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
-@maxButtonSubmenuBgColor:    rgb(200, 200, 200);
-@maxButtonSubmenuHoverBgColor: #044704;
+@maxButtonSubmenuBgColor:    rgb(110, 110, 110);
+@maxButtonSubmenuHoverBgColor: rgb(195, 195, 195);
 
 /**
  * Outer wrapper for menu
@@ -136,7 +136,7 @@ a.rm-button {
 .rm-default {
 
     li {
-        display: inline-block;
+        //display: inline-block; creates unexpected margin for desktop menu
 
         // Hover over a menu item
         &:hover {
@@ -155,13 +155,15 @@ a.rm-button {
     a {
         display: block;
         text-decoration: none;
-        white-space: nowrap;
+        background-color: @navbarItemBgColor;
+        /*space: nowrap;*/
         padding: 1em;
         outline: none;
 
         &:hover {
-            text-decoration: none; //testar
-            background-color: #131313; //testar
+            text-decoration: none;
+            background-color: @navbarItemHoverBgColor;
+            color: @navbarItemHoverColor;
         }
     }
 
@@ -212,7 +214,9 @@ a.rm-button {
         }
 
         position: relative;
-        width: 16%; //testar
+        width: 16.66%; //testar
+        float: left;
+        border-right: 1px solid @navbarMobileBorderColor;
 
         // Selected/current menu item
         &.rm-selected-parent,  // For submenu
@@ -377,6 +381,14 @@ a.rm-button {
         padding-top: 72px;
         background-color: @maxBgColor;
 
+        & a {
+            border-bottom: 1px solid white;
+            color: rgb(195, 195, 195) !important;
+            &:hover {
+                color: rgb(43, 43, 43) !important;
+            }
+        }
+
 
         /* Color when menu item is clicked */
         li a:active {
@@ -392,8 +404,13 @@ a.rm-button {
             //color: @navbarMenuButtonHoverColor; 
         //}
 
-        .rm-show-submenu li {
-            width: 100%; // testar full bredd på undermeny
+        .rm-show-submenu {
+            & li {
+                width: 100%;
+            }
+            & a {
+                padding-left: 3em;
+            }
         }
 
         /* Button for submenu */
@@ -417,20 +434,21 @@ a.rm-button {
 
             &:hover {
                 text-decoration: none;
-                background-color: @maxButtonSubmenuHoverBgColor;
+                background-color: rgb(140, 140, 140);
             }
         }
 
-        /* Style for submenu */
-        li ul {
-            padding-left: 8px;
+        .rm-submenu-open a {
+            color: rgb(195, 195, 195) !important;
+            &:hover {
+                color: rgb(43, 43, 43) !important;
+            }
         }
 
         // Header of submenu is opened
         .rm-submenu-open > .rm-submenu-button:after {
             content: "\25B2";
         }
-
     }
 
     &.rm-swipe-left {
