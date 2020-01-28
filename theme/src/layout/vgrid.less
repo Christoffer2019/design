@@ -1,0 +1,294 @@
+/**
+ * Layout for vertical grid
+ */
+
+ /**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+@color-1: white;
+@color-2: rgb(43, 43, 43);
+@color-3: rgb(190, 190, 190);
+@color-4: rgb(160, 160, 160);
+
+@width-1: 100%;
+@width-2: 70%;
+@width-3: 63%;
+@width-4: 50%;
+@width-5: 33.33%;
+@width-6: 30%;
+@width-7: 20%;
+@width-8: 16.66%;
+@width-9: 40%;
+
+@min-width-1: 700px;
+@min-width-2: 1050px;
+
+@trans-dur-short: 0.3s;
+@trans-dur-long: 0.4s;
+
+@border-width-1: 1px;
+@border-width-2: 2px;
+
+@padding-1: 2.5em;
+@padding-2: 0.7em;
+@padding-3: 1.5em;
+@padding-4: 1em;
+@padding-5: 2em;
+
+@margin-1: 0.7em;
+@margin-2: 1em;
+@margin-3: 1.5em;
+@margin-4: 2em;
+
+// Show the vertical grid
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    /* Don't forget to update width on vgrid in @media in 
+     * responsive-kmom03.less when changing width below.
+     */
+    #desinax-vgrid.showGrid(@gridImage, @min-width-2 - 20px);
+
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+/**
+ * General
+ */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.row {
+    #desinax-vgrid.row();
+    margin-bottom: @magicNumber;
+}
+
+.article {
+    word-wrap: break-word;
+}
+
+/**
+* Header
+*/
+
+.region-header-col-1,
+.region-header-col-2,
+.region-header-col-3,
+.region-header {
+    height: 2.45em;
+    background-color: @color-2;
+    font-size: 1rem !important;
+}
+
+.region-header-col-1 {
+    display: inline-flex !important;
+}
+
+.site-logo-text a {
+    padding: 1em;
+    text-align: center;
+    background-color: @color-2;
+    color: @color-3;
+    display: inline-block;
+    height: 100%;
+    &:hover {
+        color: @color-1;
+    }
+}
+
+.site-logo img,
+.region-header-col-2 a {
+    height: 100%;
+}
+
+/**
+ * Media
+ */
+
+.right {
+     float: right;
+     margin-left: 2em;
+ }
+
+ figure {
+     max-width: 100% !important;
+     margin: 0 0 @magicNumber;
+ }
+
+ iframe {
+    max-width: 100% !important;
+ }
+
+ figure .asciinema iframe,
+ .figure-codepen iframe {
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+figure .asciinema,
+.figure-codepen {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+}
+
+/**
+ * Links
+ */
+
+a {
+    text-decoration: none;
+}
+
+.inner-wrap-main a:hover {
+    color: @color-4;
+}
+
+.region-breadcrumb a {
+    width: 10em;
+}
+
+.inner-wrap-flash .row,
+.inner-wrap-breadcrumb .row,
+.route-om .outer-wrap-main .row {
+    width: 100%;
+}
+
+.inner-wrap-flash .row,
+.inner-wrap-breadcrumb .row,
+.region-header-col-2,
+.region-header-col-3,
+.route-om .row,
+.route-om .region-header-col-1
+    {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.breadcrumb-list ul,
+.toc ul {
+    padding: 0;
+}
+
+.region-flash img,
+.site-logo img {
+    display: block; 
+} 
+
+.hljs {
+    overflow-x: auto;
+    font-size: 1em !important;
+}
+
+span {
+    font-size: 80%;
+}
+ 
+ /* navbars and links */
+
+ .inner-wrap-main a {
+     color: @color-2;
+ }
+
+ .next-previous,
+ .breadcrumb-list a,
+ .has-sidebar-right img,
+ .block .sidebar img,
+ .byline-image img,
+ .byline-image {
+     display: block;
+ }
+ 
+ /* .next-previous links */
+ 
+ .next-previous {
+     color: @color-2;
+     margin-bottom: @magicNumber;
+     & a {
+         color: @color-2;
+         &:hover {
+             color: @color-3;
+         }
+     }
+ }
+
+ .breadcrumb-list ul {
+    list-style-type: none;
+}
+ 
+ .breadcrumb-list a {
+     transition-duration: @trans-dur-short;
+     color: @color-2;
+        &:hover {
+            color: @color-3;
+        }
+ }
+ 
+ .stylechooser {
+     overflow-x: auto;
+ }
+
+ img,
+ fieldset {
+     max-width: @width-1;
+ }
+ 
+ .author {
+     font-style: italic;    
+ }
+
+/**
+ * Link to top page
+ */
+
+.link-to-top-page {
+    display: block;
+    text-decoration: none;
+    padding: @padding-2 @padding-2;
+    transition-duration: @trans-dur-short;
+    text-align: center;
+    background-color: @color-2;
+    color: @color-3;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+
+    &:hover {
+        background-color: @color-3;
+        color: @color-2;
+    }
+}
+
+/**
+ * Footer
+ */
+
+.outer-wrap-footer {
+    background-color: @color-2;
+}
+
+.footer-column a,
+ .inner-wrap-footer {
+    color: @color-3;
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+    margin-top: calc(@magicNumber - @fontSizeBody);
+}
+
+.footer-column a:hover {
+    color: @color-1 !important;
+}

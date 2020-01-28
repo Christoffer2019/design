@@ -1,0 +1,254 @@
+/**
+ * Layout for responsive style through media queries.
+ */
+
+/**
+ * Variables
+ */ 
+
+ @color-1: white;
+ @color-2: rgb(43, 43, 43);
+ @color-3: rgb(190, 190, 190);
+ 
+ @width-1: 100%;
+ @width-2: 70%;
+ @width-3: 63%;
+ @width-4: 50%;
+ @width-5: 33.33%;
+ @width-6: 30%;
+ @width-7: 20%;
+ @width-8: 16.66%;
+ @width-9: 40%;
+ 
+ @min-width-1: 700px;
+ @min-width-2: 1050px;
+ @min-width-3: 1220px;
+ 
+ @trans-dur-short: 0.3s;
+ @trans-dur-long: 0.4s;
+ 
+ @border-width-1: 1px;
+ @border-width-2: 2px;
+ 
+ @padding-2: 0.7em;
+
+ //@columns: 24;
+
+/**
+ * General layout
+ */
+
+@media (min-width: @min-width-1) {
+    /**
+     * Main
+     */
+
+     .region-main {
+        #desinax-vgrid.column(14);
+    }
+
+    /**
+     * Header
+     */
+
+    .region-header-col-1 {
+        #desinax-vgrid.column(5);
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(19);
+    }
+
+    .site-logo {
+        width: 2.45rem;
+    }
+
+    .site-logo-text a {
+        padding: 0.8em 0.7em;
+    }
+
+    /**
+     * Hide mobile menu
+     */
+
+    .rm-navbar-max {
+        display: none;
+    }
+
+    /**
+     * Desktop submenu
+     */
+
+    .toc {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        width: @width-1;
+        & a {
+            display: block;
+            text-decoration: none;
+            padding: @padding-2 @padding-2;
+            transition-duration: @trans-dur-short;
+            text-align: center;
+            background-color: @color-2;
+            color: @color-3;
+            border-bottom: 1px solid @color-1;
+            &:hover {
+                background-color: @color-3;
+                color: @color-2;
+            }
+        }
+    }
+
+    /**
+     * Sidebar
+     */
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns / 3);
+    }
+
+    .region-sidebar-right,
+    .region-main {
+        #desinax-vgrid.push(@columns / 12);
+    }
+
+    .route- .region-main,
+    .route-om .region-main,
+    .route-style .region-main,
+    .route-test .region-main
+    {
+        #desinax-vgrid.push(0);
+    }
+
+    /**
+     * Byline
+     */
+
+    .byline-image {
+        #desinax-vgrid.column(@columns / 4);
+    }
+
+    .byline-text {
+        #desinax-vgrid.column(@columns * 2/3);
+        #desinax-vgrid.push(@columns / 12);
+    }
+
+    /**
+     * Footer
+     */
+
+    .footer-column {
+        #desinax-vgrid.column(@columns / 3);
+    }
+}
+
+@media (max-width: @min-width-2) {
+    .route-style .region-main {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
+    }
+}
+
+@media (min-width: @min-width-2) {
+    /**
+     * General
+     */
+
+     .route-style .region-main {
+        #desinax-vgrid.column(@columns * 3/4);
+        #desinax-vgrid.push(3);
+    }
+
+    .inner-wrap-header,
+    .region-header {
+        #desinax-vgrid.grid(@width-1);
+    }
+
+    .inner-wrap-breadcrumb,
+    .inner-wrap-main,
+    .inner-wrap-footer,
+    .inner-wrap-flash-message,
+    .inner-wrap-flash {
+        #desinax-vgrid.grid(@min-width-2 - 20px);
+    }
+}
+
+@media (max-width: @min-width-1 - 1px) {
+    /**
+     * General
+     */
+
+    .region-main,
+    .footer-column,
+    .region-header-col-1,
+    .route-test .region-main {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .route-om .region-main {
+        margin-bottom: @magicNumber;
+    }
+
+    /**
+     * Header
+     */
+
+    .region-header-col-2,
+    .region-header-col-3 {
+        #desinax-vgrid.column(0);
+    }
+
+    .inner-wrap-header .row {
+        height: 2.45em;
+    }
+
+    .site-logo-text a {
+        padding: 0.8em 0.7em;
+    }
+
+    .site-logo {
+        width: 2.45rem;
+    }
+
+    /**
+     * Hide responsive and desktop navbar
+     */
+
+    .toc {
+        display: none;
+    }
+
+
+}
+
+@media (min-width: @min-width-3) {
+    /**
+     * Header
+     */
+
+    .region-header-col-1,
+    .region-header-col-2,
+    .region-header-col-3,
+    .region-header {
+        height: 3.45em;
+    }
+
+    .site-logo {
+        width: 3.45rem;
+    }
+
+    .site-logo-text a {
+        font-size: 1rem;
+        padding: 1em;
+    }
+
+    .region-header-col-3 {
+        #desinax-vgrid.column(5);
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(14);
+    }
+}
