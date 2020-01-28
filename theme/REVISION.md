@@ -42,3 +42,16 @@ v2.0.0 (2019-12-07)
 * Added a new stylesheet: css/kmom01_v2.min.css, which is a copy of css/kmom01.css, but coded in less.
 * Added content in redovisning/kmom02
 * Small changes in css/kmom01.css
+
+v3.0.0 (2020-01-28)
+-------------------
+
+* Updated revision history
+* Changed Makefile so that you can choose to compile specific (please write: 'make build LESS_SOURCES=src/lessFileName.less' where lessFileName is a less file) or all (please write: 'make build') less files in your terminal.
+* Added a function in htdocs/js/main.js for changing image path based on the current width of the browser window.
+* Added some images
+* Changed default stylesheet to htdocs/css/kmom03.min.css
+* Added new stylesheets: htdocs/css/kmom03.min.css and htdocs/css/kmom03.css, which are compilated from theme/src/kmom03.less.
+* Changed style for menu and footer.
+* Added vertical and typographic grid
+* Wrote an article for course part 3 in content/redovisning/03_kmom03.md
