@@ -16,6 +16,20 @@ return [
             "title" => "Första sidan, börja här.",
         ],
         [
+            "text" => "Rapporter",
+            "url" => "rapport",
+            "title" => "Rapporter i kursen design",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Färgschema",
+                        "url" => "rapport/fargschema",
+                        "title" => "Färgschema för kmom04",
+                    ],
+                ],
+            ],
+        ],
+        [
             "text" => "Redovisning",
             "url" => "redovisning",
             "title" => "Redovisningstexter från kursmomenten.",
