@@ -11,40 +11,33 @@
  * Variables
  */
 
-@color-1: white;
-@color-2: rgb(43, 43, 43);
-@color-3: rgb(190, 190, 190);
-@color-4: rgb(160, 160, 160);
+@logoColor: rgb(190, 190, 190);
+@logoHoverColor: white;
+@headerBgColor: rgb(43, 43, 43);
+
+@linkToTopBgColor: @headerBgColor;
+@linkToTopColor: @logoColor;
+@linkToTopHoverBgColor: @logoColor;
+@linkToTopHoverColor: @headerBgColor;
+
+@footerBgColor: @headerBgColor;
+@footerColor: @logoColor;
+@footerHoverColor: @logoHoverColor;
+
+@linkColor: @headerBgColor;
+@linkHoverColor: @logoColor;
+@linkHoverColor2: rgb(160, 160, 160);
 
 @width-1: 100%;
-@width-2: 70%;
-@width-3: 63%;
-@width-4: 50%;
-@width-5: 33.33%;
-@width-6: 30%;
-@width-7: 20%;
-@width-8: 16.66%;
-@width-9: 40%;
 
-@min-width-1: 700px;
-@min-width-2: 1050px;
+@trans-dur: 0.3s;
 
-@trans-dur-short: 0.3s;
-@trans-dur-long: 0.4s;
-
-@border-width-1: 1px;
-@border-width-2: 2px;
-
-@padding-1: 2.5em;
+@padding-1: 1em;
 @padding-2: 0.7em;
-@padding-3: 1.5em;
-@padding-4: 1em;
-@padding-5: 2em;
 
-@margin-1: 0.7em;
-@margin-2: 1em;
-@margin-3: 1.5em;
-@margin-4: 2em;
+@margin-1: 2em;
+
+@window-width-2: 1050px;
 
 // Show the vertical grid
 .vgrid .inner-wrap {
@@ -53,7 +46,7 @@
     /* Don't forget to update width on vgrid in @media in 
      * responsive-kmom03.less when changing width below.
      */
-    #desinax-vgrid.showGrid(@gridImage, @min-width-2 - 20px);
+    #desinax-vgrid.showGrid(@gridImage, @window-width-2 - 20px);
 
     &.inner-wrap-header {
         #desinax-vgrid.showGrid(@gridImage);
@@ -66,7 +59,7 @@
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: @width-1;
 }
 
 .row {
@@ -87,7 +80,7 @@ img {
 .region-header-col-3,
 .region-header {
     height: 2.45em;
-    background-color: @color-2;
+    background-color: @headerBgColor;
     font-size: 1rem !important;
 }
 
@@ -96,14 +89,14 @@ img {
 }
 
 .site-logo-text a {
-    padding: 1em;
+    padding: @padding-1;
     text-align: center;
-    background-color: @color-2;
-    color: @color-3;
+    background-color: @headerBgColor;
+    color: @logoColor;
     display: inline-block;
     height: 100%;
     &:hover {
-        color: @color-1;
+        color: @logoHoverColor;
     }
 }
 
@@ -118,16 +111,16 @@ img {
 
 .right {
      float: right;
-     margin-left: 2em;
+     margin-left: @margin-1;
  }
 
  figure {
-     max-width: 100% !important;
+     max-width: @width-1 !important;
      margin: 0 0 @magicNumber;
  }
 
  iframe {
-    max-width: 100% !important;
+    max-width: @width-1 !important;
  }
 
  figure .asciinema iframe,
@@ -152,8 +145,11 @@ a {
     text-decoration: none;
 }
 
-.inner-wrap-main a:hover {
-    color: @color-4;
+.inner-wrap-main a {
+    color: @linkColor;
+    &:hover {
+        color: @linkHoverColor2;
+    }
 }
 
 .region-breadcrumb a {
@@ -163,7 +159,7 @@ a {
 .inner-wrap-flash .row,
 .inner-wrap-breadcrumb .row,
 .route-om .outer-wrap-main .row {
-    width: 100%;
+    width: @width-1;
 }
 
 .inner-wrap-flash .row,
@@ -198,10 +194,6 @@ span {
  
  /* navbars and links */
 
- .inner-wrap-main a {
-     color: @color-2;
- }
-
  .next-previous,
  .breadcrumb-list a,
  .has-sidebar-right img,
@@ -211,31 +203,31 @@ span {
      display: block;
  }
  
- /* .next-previous links */
- 
  .next-previous {
-     color: @color-2;
+     color: @linkColor;
      margin-bottom: @magicNumber;
      & a {
-         color: @color-2;
+         color: @linkColor;
          &:hover {
-             color: @color-3;
+             color: @linkHoverColor;
          }
      }
  }
 
- .breadcrumb-list ul {
-    list-style-type: none;
-}
- 
- .breadcrumb-list a {
-     transition-duration: @trans-dur-short;
-     color: @color-2;
-        &:hover {
-            color: @color-3;
-        }
+ .breadcrumb-list {
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        transition-duration: @trans-dur;
+        color: @linkColor;
+           &:hover {
+               color: @linkHoverColor;
+           }
+    }
  }
- 
+
  .stylechooser {
      overflow-x: auto;
  }
@@ -254,20 +246,20 @@ span {
  */
 
 .link-to-top-page {
-    display: block;
+    display: none; // hide the button by default
     text-decoration: none;
-    padding: @padding-2 @padding-2;
-    transition-duration: @trans-dur-short;
+    padding: @padding-2;
+    transition-duration: @trans-dur;
     text-align: center;
-    background-color: @color-2;
-    color: @color-3;
+    background-color: @linkToTopBgColor;
+    color: @linkToTopColor;
     position: fixed;
-    right: 1em;
-    bottom: 1em;
+    right: 1.5rem;
+    bottom: 1rem;
 
     &:hover {
-        background-color: @color-3;
-        color: @color-2;
+        background-color: @linkToTopHoverBgColor;
+        color: @linkToTopHoverColor;
     }
 }
 
@@ -276,12 +268,12 @@ span {
  */
 
 .outer-wrap-footer {
-    background-color: @color-2;
+    background-color: @footerBgColor;
 }
 
 .footer-column a,
  .inner-wrap-footer {
-    color: @color-3;
+    color: @footerColor;
 }
 
 .site-footer {
@@ -290,5 +282,5 @@ span {
 }
 
 .footer-column a:hover {
-    color: @color-1 !important;
+    color: @footerHoverColor !important;
 }

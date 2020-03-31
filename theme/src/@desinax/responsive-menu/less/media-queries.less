@@ -2,6 +2,10 @@
  * Style for responsive menu
  */
 
+ @desktopNavbarFontSize: 0.8em;
+ @desktopNavbarPaddingTB: 0.8em;
+ @desktopNavbarPaddingLR: 0.7em;
+
 
  /**
   * Example on media queries
@@ -22,14 +26,14 @@
      }
  }
 
- @media screen and (min-width: 700px) and (max-width: 1219px) {
+ @media screen and (min-width: 700px) and (max-width: 1399px) {
     /**
     * Menu layout for the desktop variant, usually full width of browser.
     */
 
     .rm-desktop li a {
         // The link of the menu item
-        padding: 0.8em 0.7em; //testar
-        font-size: 0.8em;
+        padding: @desktopNavbarPaddingTB @desktopNavbarPaddingLR;
+        font-size: @desktopNavbarFontSize;
     }
 }

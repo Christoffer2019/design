@@ -55,6 +55,7 @@
 @colorCodeBlockBorder:  #ccc;
 @borderSizeCodeblock:   1px;
 
+// tables
 @colorTableHeaderBorder:    #aaa;
 @sizeTableHeaderBorder:     2px;
 @bgColorTableStripe:        #fafafa;
@@ -378,6 +379,7 @@
      * Tables. Because of the need for padding on TH and TD, the vertical rhythm
      * on table cells has to be 1.5*@magic-number.
      */
+
     .typographyTableElements() {
         article table,
         .table,
@@ -392,6 +394,22 @@
         .table,
         .table2 {
             width: 100%;
+        }
+
+        .table2 {
+            border-spacing: 4px;
+
+            td {
+                padding: (@magicNumber * 1.5) @magicNumber;
+            }
+        }
+
+        article table,
+        .table {
+            th,
+            td {
+                padding: @magicNumber / 2; //@magicNumber / 4;
+            }
         }
 
         // A more styled table layout
@@ -417,10 +435,11 @@
                 text-align: left;
             }
 
+            /**
             th,
             td {
                 padding: @magicNumber / 2; //@magicNumber / 4;
-            }
+            }**/
 
             tr {
                 box-shadow: 0 1px 0 @colorTableRowBorder;

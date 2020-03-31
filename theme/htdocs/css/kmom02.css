@@ -5294,6 +5294,8 @@ a.rm-button {
   background-color: transparent;
   outline: none;
   position: fixed;
+  top: 0.5rem;
+  right: 1.5rem;
 }
 a.rm-button:active {
   color: #646464;
@@ -5303,11 +5305,13 @@ a.rm-button .rm-button-face-1 {
   position: absolute;
   transition: color 0.1s ease;
   color: #646464;
+  font-size: 2.5rem !important;
 }
 a.rm-button .rm-button-face-2 {
   position: relative;
   color: transparent;
   transition: color 0.1s ease;
+  font-size: 3rem !important;
 }
 a.rm-button.rm-clicked {
   color: #044704;
@@ -5354,7 +5358,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default ul li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-  width: 16.66%;
+  width: 14.28%;
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5368,13 +5372,13 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li {
   position: relative;
-  width: 16.66%;
+  width: 14.28%;
   float: left;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 .rm-desktop li ul li {
   width: 100%;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid white;
 }
 .rm-desktop li ul {
   overflow-y: scroll;
@@ -5434,7 +5438,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-mobile li li {
   border: none;
-  border-top: 1px solid #eee;
+  border-top: 1px solid white;
 }
 /**
  * Menu layout for the max variant, for mobile screens and complete menues.
@@ -5454,8 +5458,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-max .rm-small .rm-button.rm-clicked {
   color: transparent;
   position: fixed;
-  top: 16px;
-  right: 24px;
   z-index: 999;
 }
 .rm-max .rm-mobile {
@@ -5468,7 +5470,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   max-width: 500px;
   height: 500px;
   overflow-y: auto;
-  padding-top: 72px;
+  padding-top: 3.5rem;
   background-color: #2b2b2b;
   /* Color when menu item is clicked */
   /* Button for submenu */
@@ -5544,7 +5546,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 1219px) {
+@media screen and (min-width: 700px) and (max-width: 1399px) {
   /**
     * Menu layout for the desktop variant, usually full width of browser.
     */

@@ -3,6 +3,7 @@
  */
 
 // General
+
 @navbarAccentColor:         #023363;
 @navbarItemBgColor:         rgb(43, 43, 43); //#444;
 @navbarItemColor:           rgb(195, 195, 195);
@@ -38,7 +39,7 @@
 @submenuZIndex:             9999;
 @submenuBgColor:            @navbarItemBgColor;
 @submenuMinWidth:           10em;
-@submenuItemBorderColor:    #eee;
+@submenuItemBorderColor:    white;
 
 // Mobile menu
 @mobileBgColor:     rgb(43, 43, 43);
@@ -94,6 +95,8 @@ a.rm-button {
     background-color: @navbarMenuButtonBgColor;
     outline: none;
     position: fixed;
+    top: 0.5rem; 
+    right: 1.5rem;
 
     //&:hover, // Avoid hover, click, double-tap behaviour
     &:active {
@@ -105,12 +108,14 @@ a.rm-button {
         position: absolute;
         transition: color 0.10s ease;
         color: @navbarMenuButtonColor; //testar
+        font-size: 2.5rem !important; // testar
     }
 
     .rm-button-face-2 {
         position: relative;
         color: transparent;
         transition: color 0.10s ease;
+        font-size: 3rem !important; // testar
     }
 
     &.rm-clicked {
@@ -181,7 +186,7 @@ a.rm-button {
 
         li {
             box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-            width: 16.66%; // testar detta
+            width: 14.28%; // testar detta
          }
 
          // Submenu
@@ -206,7 +211,7 @@ a.rm-button {
     li {
         & ul li {
             width: 100%; //testar
-            border-bottom: 1px solid @submenuItemBorderColor;
+            border-top: 1px solid @submenuItemBorderColor;
         }
         & ul {
             overflow-y: scroll; //testar scrollbar
@@ -214,9 +219,9 @@ a.rm-button {
         }
 
         position: relative;
-        width: 16.66%; //testar
+        width: 14.28%; //testar
         float: left;
-        border-right: 1px solid @navbarMobileBorderColor;
+        border-left: 1px solid @navbarMobileBorderColor;
 
         // Selected/current menu item
         &.rm-selected-parent,  // For submenu
@@ -360,8 +365,8 @@ a.rm-button {
                 //background-color: transparent;
                 color: transparent; //@maxButtonClickedColor; testar detta!
                 position: fixed;
-                top: 16px;
-                right: 24px;
+                //top: 0.5rem; 
+                //right: 0.5rem;
                 z-index: 999;
             }
         }
@@ -378,14 +383,14 @@ a.rm-button {
         max-width: 500px;
         height: 500px;
         overflow-y: auto;
-        padding-top: 72px;
+        padding-top: 3.5rem; //testar
         background-color: @maxBgColor;
 
         & a {
-            border-bottom: 1px solid white;
-            color: rgb(195, 195, 195) !important;
+            border-bottom: 1px solid @submenuItemBorderColor;
+            color: @navbarItemColor !important;
             &:hover {
-                color: rgb(43, 43, 43) !important;
+                color: @navbarItemHoverColor !important;
             }
         }
 
@@ -441,7 +446,7 @@ a.rm-button {
         .rm-submenu-open a {
             color: rgb(195, 195, 195) !important;
             &:hover {
-                color: rgb(43, 43, 43) !important;
+                color: @navbarItemHoverColor !important;
             }
         }
 

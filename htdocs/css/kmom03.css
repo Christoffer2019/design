@@ -4734,7 +4734,7 @@ template {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v19/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtY.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v20/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtY.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Source Sans Pro';
@@ -4806,6 +4806,8 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   font-size: 100%;
+  background-color: white;
+  color: black;
 }
 body {
   font: 17px/1.41176471 'Source Sans Pro', Verdana, Tahoma, 'sans-serif';
@@ -5028,10 +5030,27 @@ article .table,
 .table2 {
   width: 100%;
 }
+.table2 {
+  border-spacing: 4px;
+}
+.table2 td {
+  padding: 36px 24px;
+}
+article table th,
+.table th,
+article table td,
+.table td {
+  padding: 12px;
+}
 article table,
 .table,
 .table2 {
   border-collapse: collapse;
+  /**
+            th,
+            td {
+                padding: @magicNumber / 2; //@magicNumber / 4;
+            }**/
   /*
             tfoot {
             }
@@ -5056,14 +5075,6 @@ article table th,
   vertical-align: bottom;
   font-weight: bold;
   text-align: left;
-}
-article table th,
-.table th,
-.table2 th,
-article table td,
-.table td,
-.table2 td {
-  padding: 12px;
 }
 article table tr,
 .table tr,
@@ -5245,6 +5256,9 @@ figure .asciinema,
 a {
   text-decoration: none;
 }
+.inner-wrap-main a {
+  color: #2b2b2b;
+}
 .inner-wrap-main a:hover {
   color: #a0a0a0;
 }
@@ -5281,9 +5295,6 @@ span {
   font-size: 80%;
 }
 /* navbars and links */
-.inner-wrap-main a {
-  color: #2b2b2b;
-}
 .next-previous,
 .breadcrumb-list a,
 .has-sidebar-right img,
@@ -5292,7 +5303,6 @@ span {
 .byline-image {
   display: block;
 }
-/* .next-previous links */
 .next-previous {
   color: #2b2b2b;
   margin-bottom: 24px;
@@ -5327,16 +5337,16 @@ fieldset {
  * Link to top page
  */
 .link-to-top-page {
-  display: block;
+  display: none;
   text-decoration: none;
-  padding: 0.7em 0.7em;
+  padding: 0.7em;
   transition-duration: 0.3s;
   text-align: center;
   background-color: #2b2b2b;
   color: #bebebe;
   position: fixed;
-  right: 1em;
-  bottom: 1em;
+  right: 1.5rem;
+  bottom: 1rem;
 }
 .link-to-top-page:hover {
   background-color: #bebebe;
@@ -5409,6 +5419,7 @@ fieldset {
   }
   .site-logo-text a {
     padding: 0.8em 0.7em;
+    font-size: 1rem;
   }
   /**
      * Hide mobile menu
@@ -5428,7 +5439,7 @@ fieldset {
   .toc a {
     display: block;
     text-decoration: none;
-    padding: 0.7em 0.7em;
+    padding: 0.7em;
     transition-duration: 0.3s;
     text-align: center;
     background-color: #2b2b2b;
@@ -5554,14 +5565,17 @@ fieldset {
     margin-left: 0.52083333%;
     margin-right: 0.52083333%;
   }
-  .inner-wrap-header .row {
-    height: 2.45em;
-  }
-  .site-logo-text a {
-    padding: 0.8em 0.7em;
+  .inner-wrap-header .row,
+  .region-header-col-1,
+  .region-header {
+    height: 3.45em;
   }
   .site-logo {
-    width: 2.45rem;
+    width: 3.45rem;
+  }
+  .site-logo-text a {
+    font-size: 1rem;
+    padding: 1em;
   }
   /**
      * Hide responsive and desktop navbar
@@ -5570,7 +5584,7 @@ fieldset {
     display: none;
   }
 }
-@media (min-width: 1220px) {
+@media (min-width: 1400px) {
   /**
      * Header
      */
@@ -5636,6 +5650,8 @@ a.rm-button {
   background-color: transparent;
   outline: none;
   position: fixed;
+  top: 0.5rem;
+  right: 1.5rem;
 }
 a.rm-button:active {
   color: #646464;
@@ -5645,11 +5661,13 @@ a.rm-button .rm-button-face-1 {
   position: absolute;
   transition: color 0.1s ease;
   color: #646464;
+  font-size: 2.5rem !important;
 }
 a.rm-button .rm-button-face-2 {
   position: relative;
   color: transparent;
   transition: color 0.1s ease;
+  font-size: 3rem !important;
 }
 a.rm-button.rm-clicked {
   color: #044704;
@@ -5696,7 +5714,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default ul li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-  width: 16.66%;
+  width: 14.28%;
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5710,13 +5728,13 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li {
   position: relative;
-  width: 16.66%;
+  width: 14.28%;
   float: left;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 .rm-desktop li ul li {
   width: 100%;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid white;
 }
 .rm-desktop li ul {
   overflow-y: scroll;
@@ -5776,7 +5794,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-mobile li li {
   border: none;
-  border-top: 1px solid #eee;
+  border-top: 1px solid white;
 }
 /**
  * Menu layout for the max variant, for mobile screens and complete menues.
@@ -5796,8 +5814,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-max .rm-small .rm-button.rm-clicked {
   color: transparent;
   position: fixed;
-  top: 16px;
-  right: 24px;
   z-index: 999;
 }
 .rm-max .rm-mobile {
@@ -5810,7 +5826,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   max-width: 500px;
   height: 500px;
   overflow-y: auto;
-  padding-top: 72px;
+  padding-top: 3.5rem;
   background-color: #2b2b2b;
   /* Color when menu item is clicked */
   /* Button for submenu */
@@ -5886,7 +5902,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 1219px) {
+@media screen and (min-width: 700px) and (max-width: 1399px) {
   /**
     * Menu layout for the desktop variant, usually full width of browser.
     */
