@@ -1,0 +1,179 @@
+/*!
+ * Colorful theme for kmom04.
+ *
+ * This stylesheet is for the design course and kmom01. Its intention is to
+ * use kmom01.css and lessify the style and use this as a wrapper for the new
+ * style.
+ */
+
+/**
+ * Normalize and reset the style.
+ */
+
+ @import "normalize.css/normalize.less";
+
+
+ /**
+  * Font Awesome.
+  */
+ 
+  @import "@fortawesome/fontawesome-free/less/fontawesome.less";
+  @import "@fortawesome/fontawesome-free/less/solid.less";
+  @import "@fortawesome/fontawesome-free/less/brands.less";
+ 
+ 
+ /*
+  * Import Google fonts (Neuton, Work Sans)
+  */
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+ 
+ 
+ /**
+  * Import the typographic grid.
+  */
+  @import "@desinax/typographic-grid/less/typography-font-families.less";
+  @import "@desinax/typographic-grid/less/typography-defaults.less";
+ 
+ // Show the typographic grid
+ .hgrid .inner-wrap {
+     @gridImage: "../img/magic-number-@{magicNumber}.png";
+     #desinax-hgrid.showGrid(@gridImage);
+ }
+ 
+ 
+ /**
+   * Base style to affect HTML elements on a general scale.
+   */
+   @import "base/base-kmom03.less";
+ 
+ 
+  /**
+  * Import the vertical grid.
+  */
+ 
+ @import "@desinax/vertical-grid/less/grid.less";
+ @import "layout/vgrid.less";
+ 
+ // Default grid, change to fit your requirements.
+ //@columnWidth:   30;
+ //@gutterWidth:   10;
+ //@columns:       24;
+ //@gridType:      "float"; // "flex"
+ 
+ 
+  /**
+   * Layout style for general structure of header, navbar, main, footer
+   * and other regions of the page including route specific styles.
+   */
+ 
+  //@import "layout/layout_default.less";
+  //@import "layout/responsive_default.less";
+  @import "layout/responsive-kmom03.less";
+  //@import "layout/regions.less";     // To add style for ?regions
+  
+ 
+ /**
+  * A responsive menu.
+  */
+ 
+  @import "@desinax/responsive-menu/less/responsive-menu.less";
+  @import "@desinax/responsive-menu/less/media-queries.less"; 
+  
+  /**
+   * My own style
+   */
+
+ /**
+  * General colors
+  */
+
+ // base
+ @htmlBgColor: #06273D;
+ @htmlColor: rgb(242, 242, 242);
+
+ // vgrid
+ @logoColor: @htmlColor;
+ @logoHoverColor: #ccc;
+ @headerBgColor: @navbarAccentColor;
+
+ @footerBgColor: #224D0B;
+ @footerColor: #fff;
+ @footerHoverColor: @logoHoverColor;
+ 
+ @linkToTopBgColor: @desktopSubmenuBgColor;
+ @linkToTopColor: @footerColor;
+
+ @linkToTopHoverBgColor: #D11F00;
+ @linkToTopHoverColor: @footerColor;
+
+ @linkColor: @htmlColor;
+ @linkHoverColor: @logoHoverColor;
+ @linkHoverColor2: @logoHoverColor;
+
+ // typography-defaults
+ @colorH1BorderBottom: @htmlColor;
+ @colorH2BorderBottom: rgb(200, 200, 200);
+ @colorH3BorderBottom: rgb(160, 160, 160);
+ @colorH4BorderBottom: rgb(120, 120, 120);
+ @colorH5BorderBottom: @htmlBgColor;
+ @colorH6BorderBottom: @htmlBgColor;
+ 
+ @borderColorCodeInline: @htmlColor;
+ @bgColorCodeInline:     @htmlBgColor;
+ @bgColorCodeBlock:      @htmlBgColor;
+ @colorCodeBlockBorder:  @htmlColor;
+
+ /**
+  * Navbar colors
+  */
+ 
+ // responsive-kmom03
+ @desktopSubmenuBgColor: #236A99;
+ @desktopSubmenuColor: @footerColor;
+ @borderBottomColor: @htmlBgColor;
+
+ @desktopSubmenuHoverBgColor: @linkToTopHoverBgColor;
+ @desktopSubmenuHoverColor: @footerColor;
+ 
+ // responsive-menu
+ @navbarAccentColor: #203B12;
+ @navbarItemColor: @htmlColor;
+ @navbarItemBgColor: @navbarAccentColor;
+
+ @navbarMenuButtonColor: @desktopSubmenuBgColor;
+ @mobileBgColor: @navbarAccentColor !important;
+ @mobileColor: @navbarAccentColor !important;
+
+ @navbarItemHoverColor: @footerColor;
+ @navbarItemHoverBgColor: #D11F00;
+ @navbarMenuButtonHoverColor: @htmlColor;
+ @maxButtonSubmenuHoverBgColor: @navbarItemHoverBgColor;
+
+ @submenuItemBorderColor: @footerBgColor;
+ @navbarMobileBorderColor: @footerBgColor;
+ @navbarMobileItemBorderColor: @footerBgColor;
+
+ // media-queries
+@desktopNavbarFontSize: 0.7em;
+@desktopNavbarPaddingTB: 1em;
+@desktopNavbarPaddingLR: 0.4em;
+
+/**
+ * Header
+ */
+ @logoFontSizeS: 0.7rem;
+ @logoPaddingTB: 1em;
+ 
+ /*
+  * Font family
+  */
+ @fontFamilyBody: 'Work Sans', Verdana, Tahoma, 'sans-serif';
+ @fontFamilyHeadings: 'Neuton', Georgia, serif;
+ 
+/*
+ * Magic number and base fontsize
+ */
+ @magicNumber:  24px;  // 22px
+ @fontSizeBody: 17px;
+ 
