@@ -1,5 +1,5 @@
 /**
- * Function for images.
+ * Main js
  */
 (function () {
     "use strict";
@@ -8,8 +8,8 @@
     var about = document.getElementById("about_img");
 
     changeImageSize();
-
     window.onresize = changeImageSize;
+    window.onscroll = showLinkToTop;
 
     function changeImageSize() {
         /**
@@ -33,6 +33,21 @@
             if (about) {
                 about.src = pathStart + "about1080x719" + pathEnd;
             }
+        }
+    }
+
+    function showLinkToTop() {
+        /**
+         * Hide the link to top button when the top of the page is
+         * displayed.
+         */
+        var currentScrollPos = window.pageYOffset;
+        var linkToTop = document.getElementById("link-to-top-page");
+
+        if (currentScrollPos > 0) {
+            linkToTop.style.display = "inline-block";
+        } else {
+            linkToTop.style.display = "none";
         }
     }
 }());
