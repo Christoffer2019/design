@@ -57,3 +57,18 @@ v3.0.0 (2020-01-28)
 * Wrote an article for course part 3 in content/redovisning/03_kmom03.md
 * Minor changes in content map.
 * Included htdocs/js/main.js, changed favicon image and added site logo text in config/page.php. 
+
+v4.0.0 (2020-03-31)
+-------------------
+
+* Updated revision history
+* Added pages that will contain reports for the course design.
+* Wrote a report about color schemes for three websites in fashion
+* Updated menu
+* Changed text in redovisning/index
+* Added function in htdocs/js/main.js for hiding the link to top button when the top of the page is displayed.
+* Added three new themes: minimalistic, dark and colorful.
+* Added images
+* Wrote an article for course part 4 in content/redovisning/04_kmom04.md
+* Minor changes in content map and some less files.
+* Changed default style sheet to dark theme.
