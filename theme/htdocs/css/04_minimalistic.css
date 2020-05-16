@@ -5728,7 +5728,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default ul li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-  width: 14.28%;
+  width: 12.5%;
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5742,9 +5742,8 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li {
   position: relative;
-  width: 14.28%;
+  width: 12.5%;
   float: left;
-  border-left: 1px solid #ddd;
 }
 .rm-desktop li ul li {
   width: 100%;
