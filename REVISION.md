@@ -72,3 +72,23 @@ v4.0.0 (2020-03-31)
 * Wrote an article for course part 4 in content/redovisning/04_kmom04.md
 * Minor changes in content map and some less files.
 * Changed default style sheet to dark theme.
+
+v5.0.0 (2020-05-16)
+-------------------
+
+* Updated
+    * REVISION history
+    * menu
+* Wrote
+    * a report about load times for three websites in cooking and recipe
+    * an article for course part 5 in content/redovisning/05_kmom05.md
+    * blogs about
+        * Matsumoto Castle, Matsumoto, Nagano, Japan
+        * scenery over Gifu, Japan
+        * food samples in Gujo Hachiman, Japan
+* Added
+    * new style theme: kmom05
+    * a blog with the theme today's photo
+    * images
+* Changed default stylesheet to kmom05.
+* When I installed @desinax modules, I accidentally saved over some less and css files. Lucky, I had saved the files in a previous version on my GitHub, so I could restore the files.
