@@ -25,6 +25,11 @@ return [
                         "url" => "rapport/fargschema",
                         "title" => "Färgschema för kmom04",
                     ],
+                    [
+                        "text" => "Laddningstid",
+                        "url" => "rapport/laddningstid",
+                        "title" => "Laddningstid för kmom05",
+                    ],
                 ],
             ],
         ],
@@ -68,6 +73,30 @@ return [
                         "text" => "Kmom10",
                         "url" => "redovisning/kmom10",
                         "title" => "Redovisning för kmom10.",
+                    ],
+                ],
+            ],
+        ],
+        [
+            "text" => "Blogg",
+            "url" => "blogg",
+            "title" => "Blogg: dagens bild",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Utsikt över Gifu, Japan",
+                        "url" => "blogg/utsikt-over-gifu-japan",
+                        "title" => "Utsikt över Gifu, Japan",
+                    ],
+                    [
+                        "text" => "Food Sample",
+                        "url" => "blogg/food-sample",
+                        "title" => "Food Sample",
+                    ],
+                    [
+                        "text" => "Matsumoto slott",
+                        "url" => "blogg/matsumoto-slott",
+                        "title" => "Matsumoto slott",
                     ],
                 ],
             ],
