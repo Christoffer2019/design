@@ -92,3 +92,34 @@ v5.0.0 (2020-05-16)
     * images
 * Changed default stylesheet to kmom05.
 * When I installed @desinax modules, I accidentally saved over some less and css files. Lucky, I had saved the files in a previous version on my GitHub, so I could restore the files.
+
+v6.0.0 (2020-05-22)
+-------------------
+
+### Text
+
+* Changed text in content/block/om-redovisa.md  
+* Wrote reports about design principles and design elements
+
+### Images
+
+* Added some images
+* Added images for resizing based on window width in htdocs/js/main.js
+
+### Style
+
+* Changed some css and less files
+* Changed default stylesheet to htdocs/css/kmom06-designelement.min.css
+* Added new style theme: kmom06-designelement
+
+### Footer
+
+* Added symbols for headers in content/block/footer-col-1.md, content/block/footer-col-2.md and content/block/footer-col-3.md
+* Moved content about CSS from content/block/footer-col-2 to content/block/footer-col-1.md
+* Moved content about images from content/block/footer.md and added symbol for 'to top page' button
+* Removed text about CSS and added text about images in content/block/footer-col-2.md
+
+### Miscellaneous
+
+* Updated REVISION history
+* Added symbols and some links in menu
