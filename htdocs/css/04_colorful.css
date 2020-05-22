@@ -4813,8 +4813,12 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   font-size: 100%;
-  background-color: #06273D;
   color: #f2f2f2;
+  background-image: url(../img/kmom06/texture-body.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 body {
   font: 17px/1.41176471 'Work Sans', Verdana, Tahoma, 'sans-serif';
@@ -4843,6 +4847,7 @@ h6 img {
 h1 {
   font-size: 2.375em;
   line-height: 1.18885449;
+  color: #23374b;
   font-weight: normal;
   border-bottom: 1px solid #f2f2f2;
   margin-bottom: 23px;
@@ -4861,6 +4866,7 @@ h1 + h2 {
 h2 {
   font-size: 1.875em;
   line-height: 1.50588235;
+  color: #23374b;
   font-weight: normal;
   margin-bottom: 23px;
   border-bottom: 1px solid #c8c8c8;
@@ -5231,6 +5237,12 @@ img {
   height: 100%;
 }
 /**
+ * Main
+ */
+.inner-wrap-main {
+  background: rgba(255, 255, 255, 0.9);
+}
+/**
  * Media
  */
 .right {
@@ -5325,10 +5337,10 @@ span {
 }
 .breadcrumb-list a {
   transition-duration: 0.3s;
-  color: #f2f2f2;
+  color: black;
 }
 .breadcrumb-list a:hover {
-  color: #ccc;
+  color: #4b6482;
 }
 .stylechooser {
   overflow-x: auto;
@@ -5345,25 +5357,25 @@ fieldset {
  */
 .link-to-top-page {
   display: none;
-  text-decoration: none;
-  padding: 0.7em;
   transition-duration: 0.3s;
-  text-align: center;
-  background-color: #236A99;
   color: #fff;
   position: fixed;
   right: 1.5rem;
   bottom: 1rem;
+  font-size: 3.3em;
 }
 .link-to-top-page:hover {
-  background-color: #D11F00;
   color: #fff;
 }
 /**
  * Footer
  */
 .outer-wrap-footer {
-  background-color: #224D0B;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)), url(../img/kmom06/texture-footer.jpg) #224D0B;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 .footer-column a,
 .inner-wrap-footer {
@@ -5591,7 +5603,7 @@ fieldset {
     display: none;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1450px) {
   /**
      * Header
      */
@@ -5607,20 +5619,6 @@ fieldset {
   .site-logo-text a {
     font-size: 1rem;
     padding: 1em;
-  }
-  .region-header-col-3 {
-    display: inline;
-    float: left;
-    width: 19.79166667%;
-    margin-left: 0.52083333%;
-    margin-right: 0.52083333%;
-  }
-  .region-header-col-2 {
-    display: inline;
-    float: left;
-    width: 57.29166667%;
-    margin-left: 0.52083333%;
-    margin-right: 0.52083333%;
   }
 }
 /**
@@ -5721,7 +5719,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default ul li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-  width: 12.5%;
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5735,7 +5732,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li {
   position: relative;
-  width: 12.5%;
   float: left;
 }
 .rm-desktop li ul li {
@@ -5784,8 +5780,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-mobile {
   width: 100%;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #203B12 !important;
   color: #203B12 !important;
+  background: url(../img/kmom06/texture-mobile-menu.jpg) #203B12 !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 .rm-mobile a {
   color: inherit;
@@ -5833,8 +5833,11 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   height: 500px;
   overflow-y: auto;
   padding-top: 3.5rem;
-  background-color: #2b2b2b;
-  /* Color when menu item is clicked */
+  background: url(../img/kmom06/texture-mobile-menu.jpg) #2b2b2b;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   /* Button for submenu */
 }
 .rm-max .rm-mobile a {
@@ -5843,6 +5846,10 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-max .rm-mobile a:hover {
   color: #fff !important;
+}
+.rm-max .rm-mobile li a {
+  background-color: transparent;
+  /* Color when menu item is clicked */
 }
 .rm-max .rm-mobile li a:active {
   background-color: #c3c3c3;
@@ -5890,11 +5897,21 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   right: 0;
 }
 /**
- * Style for responsive menu
+ * Media queries for responsive menu
  */
-/**
-  * Example on media queries
-  */
+/*
+ @media screen and (max-width: @window-width-4 - 1px) {
+    .rm-default ul li,
+    .rm-desktop li {
+        width: @menuItemWidth-1;
+    }
+ }*/
+@media screen and (min-width: 900px) {
+  .rm-default ul li,
+  .rm-desktop li {
+    width: 12.5%;
+  }
+}
 @media screen and (max-width: 699px) {
   .rm-small {
     display: block;
@@ -5908,10 +5925,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 1399px) {
-  /**
-    * Menu layout for the desktop variant, usually full width of browser.
-    */
+@media screen and (min-width: 700px) and (max-width: 1449px) {
   .rm-desktop li a {
     padding: 1em 0.4em;
     font-size: 0.7em;
