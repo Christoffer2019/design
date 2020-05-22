@@ -5358,7 +5358,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default ul li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-  width: 12.5%;
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5372,7 +5371,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li {
   position: relative;
-  width: 12.5%;
   float: left;
 }
 .rm-desktop li ul li {
@@ -5421,8 +5419,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-mobile {
   width: 100%;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #2b2b2b;
   color: #fff;
+  background: url(../img/kmom06/texture-mobile-menu.jpg) #2b2b2b;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 .rm-mobile a {
   color: inherit;
@@ -5470,8 +5472,11 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   height: 500px;
   overflow-y: auto;
   padding-top: 3.5rem;
-  background-color: #2b2b2b;
-  /* Color when menu item is clicked */
+  background: url(../img/kmom06/texture-mobile-menu.jpg) #2b2b2b;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   /* Button for submenu */
 }
 .rm-max .rm-mobile a {
@@ -5480,6 +5485,10 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-max .rm-mobile a:hover {
   color: #2b2b2b !important;
+}
+.rm-max .rm-mobile li a {
+  background-color: transparent;
+  /* Color when menu item is clicked */
 }
 .rm-max .rm-mobile li a:active {
   background-color: #c3c3c3;
@@ -5527,11 +5536,21 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   right: 0;
 }
 /**
- * Style for responsive menu
+ * Media queries for responsive menu
  */
-/**
-  * Example on media queries
-  */
+/*
+ @media screen and (max-width: @window-width-4 - 1px) {
+    .rm-default ul li,
+    .rm-desktop li {
+        width: @menuItemWidth-1;
+    }
+ }*/
+@media screen and (min-width: 900px) {
+  .rm-default ul li,
+  .rm-desktop li {
+    width: 12.5%;
+  }
+}
 @media screen and (max-width: 699px) {
   .rm-small {
     display: block;
@@ -5545,10 +5564,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 1399px) {
-  /**
-    * Menu layout for the desktop variant, usually full width of browser.
-    */
+@media screen and (min-width: 700px) and (max-width: 1449px) {
   .rm-desktop li a {
     padding: 0.8em 0.7em;
     font-size: 0.8em;
