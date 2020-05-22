@@ -1,6 +1,5 @@
 #### Redovisa på GitHub
-I kursen design moment 1 stylar jag denna webbsida med CSS. Här publicerar jag 
-mina redovisningstexter för kursen. 
-Denna webbsida finns som repo på 
+På den här webbsidan skapar jag olika teman i less och css samt publicerar rapporter, blogginlägg och redovisningstexter.
+Den här webbsidan finns som repo på 
 *[GitHub](https://github.com/Christoffer2019/design)*.
  
