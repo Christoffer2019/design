@@ -23,6 +23,6 @@ i kursen design.
 
 <img src="" 
         id = "about_img"
-        alt="Bild på programmeringskod">
+        alt="Bild på laptop">
 
-Bild från rawpixel.com / Markus Spiske
+Bild från rawpixel.com

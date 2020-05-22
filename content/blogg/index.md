@@ -1,5 +1,11 @@
 ---
 views:
+    flash:
+        region: flash
+        template: anax/v2/image/default
+        data:
+            src: "img/kmom05/flash-temple.jpg"
+
     main:
         template: anax/v2/article/default
         data:
