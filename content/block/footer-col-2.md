@@ -1,4 +1,3 @@
-#### CSS
+<h4><i class='fas fa-images'></i> Bilder</h4>
 
-CSS [validering](http://jigsaw.w3.org/css-validator/check/referer)
- | [specifikation](https://www.w3.org/TR/CSS/)
+Footer, flash, bakgrund: rawpixel.com
