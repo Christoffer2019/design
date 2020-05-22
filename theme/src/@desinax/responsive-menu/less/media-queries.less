@@ -1,16 +1,33 @@
 /**
- * Style for responsive menu
+ * Media queries for responsive menu
  */
 
  @desktopNavbarFontSize: 0.8em;
  @desktopNavbarPaddingTB: 0.8em;
  @desktopNavbarPaddingLR: 0.7em;
 
+ @window-width-1: 700px;
+ @window-width-3: 1450px;
+ @window-width-4: 900px;
 
- /**
-  * Example on media queries
-  */
- @media screen and (max-width: 699px) {
+ @menuItemWidth: 12.5%;
+
+ /*
+ @media screen and (max-width: @window-width-4 - 1px) {
+    .rm-default ul li,
+    .rm-desktop li {
+        width: @menuItemWidth-1;
+    }
+ }*/
+
+ @media screen and (min-width: @window-width-4) {
+    .rm-default ul li,
+    .rm-desktop li {
+        width: @menuItemWidth;
+    }
+}
+
+ @media screen and (max-width: @window-width-1 - 1px) {
      .rm-small {
          display: block;
      }
@@ -20,17 +37,13 @@
      }
  }
 
- @media screen and (min-width: 700px) {
+ @media screen and (min-width: @window-width-1) {
      .rm-small {
          display: none;
      }
  }
 
- @media screen and (min-width: 700px) and (max-width: 1399px) {
-    /**
-    * Menu layout for the desktop variant, usually full width of browser.
-    */
-
+ @media screen and (min-width: @window-width-1) and (max-width: @window-width-3 - 1px) {
     .rm-desktop li a {
         // The link of the menu item
         padding: @desktopNavbarPaddingTB @desktopNavbarPaddingLR;

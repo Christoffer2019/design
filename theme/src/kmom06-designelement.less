@@ -1,0 +1,165 @@
+ /*!
+ * Theme with focus on design elements for kmom06.
+ *
+ * This stylesheet is for the design course and kmom06.
+ */
+
+/**
+ * Normalize and reset the style.
+ */
+
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Font Awesome.
+ */
+
+ @import "@fortawesome/fontawesome-free/less/fontawesome.less";
+ @import "@fortawesome/fontawesome-free/less/solid.less";
+ @import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+/*
+ * Import Google fonts (Crimson Pro, Open Sans)
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/**
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+ @import "@desinax/figure/less/asciinema.less";
+ @import "@desinax/figure/less/codepen.less";
+ @import "@desinax/figure/less/figure.less";
+
+
+/**
+ * Import the typographic grid.
+ */
+ @import "@desinax/typographic-grid/less/typography-font-families.less";
+ @import "@desinax/typographic-grid/less/typography-defaults.less";
+
+// Show the typographic grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+  * Base style to affect HTML elements on a general scale.
+  */
+  @import "base/base-kmom03.less";
+
+
+ /**
+ * Import the vertical grid.
+ */
+
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid.less";
+
+// Default grid, change to fit your requirements.
+//@columnWidth:   30;
+//@gutterWidth:   10;
+//@columns:       24;
+//@gridType:      "float"; // "flex"
+
+
+ /**
+  * Layout style for general structure of header, navbar, main, footer
+  * and other regions of the page including route specific styles.
+  */
+
+ //@import "layout/layout_default.less";
+ //@import "layout/responsive_default.less";
+ @import "layout/responsive-kmom03.less";
+ //@import "layout/regions.less";     // To add style for ?regions
+ 
+
+/**
+ * A responsive menu.
+ */
+
+ @import "@desinax/responsive-menu/less/responsive-menu.less";
+ @import "@desinax/responsive-menu/less/media-queries.less"; 
+ 
+ /**
+  * My own style
+  */
+
+ /**
+  * Navbar colors
+  */
+
+// responsive-kmom03
+@desktopSubmenuHoverBgColor: @navbarItemHoverBgColor;
+@desktopSubmenuHoverColor: @navbarItemHoverColor;
+
+// vgrid
+@linkToTopHoverBgColor:  @navbarItemHoverBgColor;
+@linkToTopHoverColor: @navbarItemHoverBgColor;
+@window-width-2: 1050px;
+
+// responsive-menu
+@navbarAccentColor: @navbarItemHoverBgColor;
+@navbarItemHoverColor: rgb(255, 255, 255);
+@navbarItemHoverBgColor:    rgb(35, 55, 75);
+@navbarMenuButtonHoverColor: rgb(255, 255, 255);
+@maxButtonSubmenuHoverBgColor: @navbarItemHoverBgColor;
+
+// media-queries
+@desktopNavbarFontSize: 0.7em;
+@desktopNavbarPaddingTB: 1em;
+@desktopNavbarPaddingLR: 0.5em;
+
+/**
+ * Window width
+ */
+
+ @window-width-1: 700px;
+ @window-width-2: 1050px;
+ @window-width-3: 1450px;
+ @window-width-4: 930px;
+
+/**
+ * Header
+ */
+ @logoFontSizeS: 0.7rem;
+ @logoPaddingTB: 1em;
+
+/*
+ * font family and headers
+ */
+@fontFamilyBody: 'Open Sans', Verdana, Tahoma, 'sans-serif';
+@fontFamilyHeadings: 'Crimson Pro', Georgia, serif;
+@colorH1: rgb(39, 59, 80);
+
+/*
+ * Magic number and base fontsize
+ */
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 17px;
+
+
+/*
+ * Figure, asciinema, codepen
+ */
+
+figure.figure {
+    @maxContentWidth: @window-width-2;
+    #desinax-figure.figure(@maxContentWidth);
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}

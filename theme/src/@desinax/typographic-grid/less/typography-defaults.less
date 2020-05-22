@@ -19,7 +19,7 @@
 @fontSizeH6: 1.25em;
 
 // header h1-h6 borders
-@colorH1BorderBottom: rgb(43, 43, 43); // #666;
+@colorH1BorderBottom: @colorH1; // #666;
 @colorH2BorderBottom: #CCC;
 @colorH3BorderBottom: #EEE;
 @colorH4BorderBottom: #EEE;
@@ -31,6 +31,10 @@
 @borderSizeH4: 1px;
 @borderSizeH5: 1px;
 @borderSizeH6: 1px;
+
+// header color
+@colorH1: rgb(35, 55, 75);
+@colorH2: @colorH1;
 
 // fontsize code blocks
 @fontSizeCodeInline:  0.85em; //1.25em;
@@ -117,6 +121,7 @@
         h1 {
             #desinax-hgrid.fontSize(@fontSizeH1);
 
+            color: @colorH1;
             font-weight: normal;
             border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
             margin-bottom: @magicNumber - @borderSizeH1;
@@ -140,6 +145,7 @@
         h2 {
             #desinax-hgrid.fontSize(@fontSizeH2);
 
+            color: @colorH2;
             font-weight: normal;
             margin-bottom: @magicNumber - @borderSizeH2;
             border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
