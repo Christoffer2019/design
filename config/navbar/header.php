@@ -10,31 +10,41 @@ return [
     // Here comes the menu items
     "items" => [
         [
-            "text" => "Hem",
+            "text" => "<i class='fas fa-home'></i>",
             "url" => "",
             "title" => "Första sidan, börja här.",
         ],
         [
-            "text" => "Rapporter",
+            "text" => "<i class='fas fa-book'></i> Rapporter",
             "url" => "rapport",
             "title" => "Rapporter i kursen design",
             "submenu" => [
                 "items" => [
                     [
-                        "text" => "Färgschema",
+                        "text" => "<i class='fas fa-palette'></i> Färgschema",
                         "url" => "rapport/fargschema",
                         "title" => "Färgschema för kmom04",
                     ],
                     [
-                        "text" => "Laddningstid",
+                        "text" => "<i class='fas fa-hourglass-start'></i> Laddningstid",
                         "url" => "rapport/laddningstid",
                         "title" => "Laddningstid för kmom05",
+                    ],
+                    [
+                        "text" => "<i class='fas fa-paint-brush'></i> Designprincip",
+                        "url" => "rapport/designprincip",
+                        "title" => "Designprincip för kmom06",
+                    ],
+                    [
+                        "text" => "<i class='fas fa-paint-brush'></i> Designelement",
+                        "url" => "rapport/designelement",
+                        "title" => "Designelement för kmom06",
                     ],
                 ],
             ],
         ],
         [
-            "text" => "Redovisning",
+            "text" => "<i class='fas fa-book'></i> Redovisning",
             "url" => "redovisning",
             "title" => "Redovisningstexter från kursmomenten.",
             "submenu" => [
@@ -78,23 +88,23 @@ return [
             ],
         ],
         [
-            "text" => "Blogg",
+            "text" => "<i class='fas fa-camera'></i> Blogg",
             "url" => "blogg",
             "title" => "Blogg: dagens bild",
             "submenu" => [
                 "items" => [
                     [
-                        "text" => "Utsikt över Gifu, Japan",
+                        "text" => "<i class='fas fa-city'></i> Utsikt över Gifu, Japan",
                         "url" => "blogg/utsikt-over-gifu-japan",
                         "title" => "Utsikt över Gifu, Japan",
                     ],
                     [
-                        "text" => "Food Sample",
+                        "text" => "<i class='fas fa-cookie'></i> Food Sample",
                         "url" => "blogg/food-sample",
                         "title" => "Food Sample",
                     ],
                     [
-                        "text" => "Matsumoto slott",
+                        "text" => "<i class='fab fa-fort-awesome'></i> Matsumoto slott",
                         "url" => "blogg/matsumoto-slott",
                         "title" => "Matsumoto slott",
                     ],
@@ -102,17 +112,17 @@ return [
             ],
         ],
         [
-            "text" => "Om",
+            "text" => "<i class='fas fa-info'></i> Om",
             "url" => "om",
             "title" => "Om denna webbplats.",
         ],
         [
-            "text" => "Styleväljare",
+            "text" => "<i class='fas fa-font'></i> Styleväljare",
             "url" => "style",
             "title" => "Välj stylesheet.",
         ],
         [
-            "text" => "Verktyg",
+            "text" => "<i class='fas fa-cogs'></i> Verktyg",
             "url" => "verktyg",
             "title" => "Verktyg och möjligheter för utveckling.",
             "submenu" => [
@@ -226,7 +236,7 @@ return [
             ],
         ],
         [
-            "text" => "Test",
+            "text" => "<i class='fab fa-markdown'></i> Test",
             "url" => "test",
             "title" => "Testa olika konstruktioner i MarkDown",
         ],
