@@ -4814,7 +4814,7 @@ html {
   overflow-x: hidden;
   font-size: 100%;
   color: #f2f2f2;
-  background-image: url(../img/kmom06/texture-body.jpg);
+  background: url(../img/kmom06/texture-body.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom center;
@@ -5243,6 +5243,20 @@ img {
   background: rgba(255, 255, 255, 0.9);
 }
 /**
+ * Flash
+ */
+.inner-wrap-flash img {
+  width: 100%;
+}
+.route- .region-flash {
+  position: relative;
+}
+.flash-text {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+/**
  * Media
  */
 .right {
@@ -5447,6 +5461,15 @@ fieldset {
     display: none;
   }
   /**
+     * Flash
+     */
+  .flash-text {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+  }
+  /**
      * Desktop submenu
      */
   .toc {
@@ -5595,6 +5618,15 @@ fieldset {
   .site-logo-text a {
     font-size: 1rem;
     padding: 1em;
+  }
+  /**
+     * Flash
+     */
+  .flash-text {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(-15%, -15%);
   }
   /**
      * Hide responsive and desktop navbar
@@ -5899,13 +5931,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /**
  * Media queries for responsive menu
  */
-/*
- @media screen and (max-width: @window-width-4 - 1px) {
-    .rm-default ul li,
-    .rm-desktop li {
-        width: @menuItemWidth-1;
-    }
- }*/
+@media screen and (min-width: 1450px) {
+  .rm-desktop li a {
+    padding: 1em 1em;
+    font-size: 1em;
+  }
+}
 @media screen and (min-width: 900px) {
   .rm-default ul li,
   .rm-desktop li {
