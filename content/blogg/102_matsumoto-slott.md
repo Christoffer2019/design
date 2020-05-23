@@ -4,7 +4,7 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "image/kmom05/flash-matsumoto-castle.png?w=1100&crop-to-fit&area=13,15,50,5&f=contrast,-16&f=brightness,-9"
+            src: "image/kmom05/flash-matsumoto-castle.jpg?f=contrast,-16&f=brightness,-9"
 author: Christoffer Lymalm
 category:
     - Japan

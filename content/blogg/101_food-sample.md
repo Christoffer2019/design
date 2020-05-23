@@ -4,7 +4,7 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "image/kmom05/flash-food-sample.png?w=1100&crop-to-fit&area=27,0,35,0&f=contrast,-15&f=brightness,5"
+            src: "image/kmom05/flash-food-sample.jpg?f=contrast,-15&f=brightness,5"
 author: Christoffer Lymalm
 category:
     - Japan

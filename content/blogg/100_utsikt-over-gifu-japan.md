@@ -4,7 +4,7 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "image/kmom05/flash-gifu.png?w=1100&crop-to-fit&area=14,12,20,20&f=contrast,-12&f=brightness,10"
+            src: "image/kmom05/flash-gifu.jpg?f=contrast,-12&f=brightness,10"
 author: Christoffer Lymalm
 category:
     - Japan

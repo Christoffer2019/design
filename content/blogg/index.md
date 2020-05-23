@@ -4,7 +4,8 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "img/kmom05/flash-temple.jpg"
+            src: ""
+            class: "flash-temple"
 
     main:
         template: anax/v2/article/default
