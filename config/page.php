@@ -19,7 +19,7 @@ return [
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/kmom06-designelement.min.css",
+                "css/kmom06-designprinciper.min.css",
             ],
             "javascripts" => [
                 "js/responsive-menu.js",
@@ -44,7 +44,7 @@ return [
             "template" => "anax/v2/header/site_logo_text",
             "data" => [
                 "homeLink"      => "",
-                "siteLogoText"  => "Kursen Design",
+                "siteLogoText"  => "Design",
             ],
         ],
         [
