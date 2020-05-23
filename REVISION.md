@@ -123,3 +123,30 @@ v6.0.0 (2020-05-22)
 
 * Updated REVISION history
 * Added symbols and some links in menu
+
+v6.0.1 (2020-05-23)
+-------------------
+
+### Style
+
+* Changed default stylesheet htdocs/css/kmom06-designprinciper.min.css
+* Added and updated some css and less files
+* Added new style theme: kmom06-designprinciper
+
+### Images
+
+* Added and deleted some images
+* Added images for resizing based on window width in htdocs/js/main.js
+
+### Route
+
+* Changed template to anax/v2/content/default and changed route to block/flash-text in content/index.md, so I could place text inside flash image.
+* Added new route 'flash-text' for placing text inside flash image.
+
+### Miscellaneous
+
+* Updated text in README
+* Updated REVISION history
+* Updated menu
+* Changed site logo text to "Design"
+* Updated text in content/index.md.
