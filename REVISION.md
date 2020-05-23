@@ -143,10 +143,14 @@ v6.0.1 (2020-05-23)
 * Changed template to anax/v2/content/default and changed route to block/flash-text in content/index.md, so I could place text inside flash image.
 * Added new route 'flash-text' for placing text inside flash image.
 
+### Text
+
+* Updated text in content/index.md.
+* Wrote report about the theme 'design principles' and my thoughts about course part six.
+
 ### Miscellaneous
 
 * Updated text in README
 * Updated REVISION history
 * Updated menu
 * Changed site logo text to "Design"
-* Updated text in content/index.md.
