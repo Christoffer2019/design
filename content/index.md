@@ -1,6 +1,13 @@
 ---
 title: "Presentation"
 views:
+    flash:
+        region: flash
+        template: anax/v2/content/default
+        data:
+            meta: 
+                type: single
+                route: block/flash-text
     byline:
         region: main
         template: anax/v2/block/default
@@ -21,8 +28,8 @@ views:
 ---
 <div class="article-index">
 <header>
-<h1>Min me-sida i kursen design</h1>
-<p class="author">Uppdaterad<time datetime="2019-11-15"> 15 november 2019
+<h1>Presentation av Christoffer</h1>
+<p class="author">Uppdaterad<time datetime="2020-05-23"> 23 maj 2020
 </time> av Christoffer Lymalm</p>
 </header>
 
