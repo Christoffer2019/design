@@ -147,6 +147,7 @@ v6.0.1 (2020-05-23)
 
 * Updated text in content/index.md.
 * Wrote report about the theme 'design principles' and my thoughts about course part six.
+* Updated date for report kmom05
 
 ### Miscellaneous
 
