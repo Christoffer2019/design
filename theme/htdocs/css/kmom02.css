@@ -5538,13 +5538,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /**
  * Media queries for responsive menu
  */
-/*
- @media screen and (max-width: @window-width-4 - 1px) {
-    .rm-default ul li,
-    .rm-desktop li {
-        width: @menuItemWidth-1;
-    }
- }*/
+@media screen and (min-width: 1450px) {
+  .rm-desktop li a {
+    padding: 1em 1em;
+    font-size: 1em;
+  }
+}
 @media screen and (min-width: 900px) {
   .rm-default ul li,
   .rm-desktop li {
