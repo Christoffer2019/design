@@ -6,19 +6,23 @@
  @desktopNavbarPaddingTB: 0.8em;
  @desktopNavbarPaddingLR: 0.7em;
 
+ @desktopNavbarFontSizeLarge: 1em;
+ @desktopNavbarPaddingTBLarge: 1em;
+ @desktopNavbarPaddingLRLarge: 1em;
+
  @window-width-1: 700px;
  @window-width-3: 1450px;
  @window-width-4: 900px;
 
  @menuItemWidth: 12.5%;
 
- /*
- @media screen and (max-width: @window-width-4 - 1px) {
-    .rm-default ul li,
-    .rm-desktop li {
-        width: @menuItemWidth-1;
+ @media screen and (min-width: @window-width-3) {
+    .rm-desktop li a {
+        // The link of the menu item
+        padding: @desktopNavbarPaddingTBLarge @desktopNavbarPaddingLRLarge;
+        font-size: @desktopNavbarFontSizeLarge;
     }
- }*/
+}
 
  @media screen and (min-width: @window-width-4) {
     .rm-default ul li,

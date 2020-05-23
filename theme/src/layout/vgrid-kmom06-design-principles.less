@@ -15,10 +15,12 @@
 @logoHoverColor: white;
 @headerBgColor: rgb(43, 43, 43);
 
-@linkToTopColor: rgb(110, 110, 110);
+@logoTextFontSize: 1em;
+
+@linkToTopColor: rgb(150, 150, 150);
 @linkToTopHoverColor: rgb(35, 55, 75);
 
-@mainContentBgColor: rgba(255, 255, 255, 0.9);
+@mainContentBgColor: rgba(255, 255, 255, 0.84);
 
 @footerBgColor: @headerBgColor;
 @footerColor: @logoColor;
@@ -27,8 +29,8 @@
 @linkColor: @headerBgColor;
 @linkHoverColor: rgb(170, 170, 170);
 
-@BLlinkColor: black;
-@BLlinkHoverColor: rgb(75, 100, 130);
+@BLlinkColor: rgb(205, 205, 205);
+@BLlinkHoverColor: @linkToTopHoverColor;
 
 @width-1: 100%;
 
@@ -40,6 +42,9 @@
 @margin-1: 2em;
 
 @window-width-2: 1050px;
+
+@footerBorderRadius: 1em;
+@mainBorderRadius: @footerBorderRadius;
 
 // Show the vertical grid
 .vgrid .inner-wrap {
@@ -97,6 +102,7 @@ img {
     color: @logoColor;
     display: inline-block;
     height: 100%;
+    font-size: @logoTextFontSize;
     &:hover {
         color: @logoHoverColor;
     }
@@ -108,29 +114,24 @@ img {
 }
 
 /**
+ * Flash
+ */
+
+ .inner-wrap-flash img {
+     width: 100%;
+ }
+
+.route- .region-flash {
+    position: relative;
+}
+
+/**
  * Main
  */
 
  .inner-wrap-main {
     background: @mainContentBgColor;
-}
-
-/**
- * Flash
- */
-
- .inner-wrap-flash img {
-    width: 100%;
-}
-
-.route- .region-flash {
-   position: relative;
-}
-
-.flash-text {
-    position: absolute;
-    top: 1em;
-    left: 1em;
+    border-radius: @mainBorderRadius;
 }
 
 /**
@@ -292,11 +293,17 @@ span {
  */
 
 .outer-wrap-footer {
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65) ), url(../img/kmom06/texture-footer.jpg) @footerBgColor;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6) ),
+        url(../img/kmom06-design-principles/pyramids-footer.png),
+        linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url(../img/kmom06-design-principles/texture-footer.jpg),
+        @footerBgColor;
     background-size: cover;
     background-attachment: fixed;
-    background-position: bottom center;
+    background-position: bottom left;
     background-repeat: no-repeat;
+    border-radius: @footerBorderRadius;
 }
 
 .footer-column a,
