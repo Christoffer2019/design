@@ -1,3 +1,12 @@
+---
+views:
+    flash:
+        region: flash
+        template: anax/v2/image/default
+        data:
+            src: ""
+            class: "flash-forest"
+---
 Test
 ====
 Testa olika konstruktioner i MarkDown

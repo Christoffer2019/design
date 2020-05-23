@@ -4,7 +4,8 @@ views:
         region: flash
         template: anax/v2/image/default
         data:
-            src: "img/kmom06/flash.jpg"
+            src: "img/kmom06/flash-green.jpg"
+            class: "flash-green"
 ---
 Bildhantering med Cimage
 =========================
