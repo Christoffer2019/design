@@ -155,3 +155,12 @@ v6.0.1 (2020-05-23)
 * Updated REVISION history
 * Updated menu
 * Changed site logo text to "Design"
+
+v10.0.0 (2020-05-31)
+-------------------
+
+* Wrote report about website design and current trends
+* Wrote report for course part 10
+* Updated REVISION history
+* Added images
+* Updated navbar
