@@ -45,6 +45,11 @@ return [
                         "url" => "rapport/designprinciper",
                         "title" => "Designprinciper för kmom06",
                     ],
+                    [
+                        "text" => "<i class='fas fa-paint-brush'></i> Webbplatsdesign",
+                        "url" => "rapport/webbplatsdesign",
+                        "title" => "Webbplatsdesign för kmom10",
+                    ],
                 ],
             ],
         ],
